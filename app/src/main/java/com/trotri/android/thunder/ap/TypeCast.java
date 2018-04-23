@@ -44,7 +44,7 @@ public class TypeCast {
      * TypeCast.toInt(null, -1)); // Return：-1，Not：0
      * TypeCast.toInt("", -1)); // Return：-1，Not：0
      *
-     * @param value        a Object
+     * @param value        an Object
      * @param defaultValue Value to return if value is null、empty or convert failure.
      * @return Returns the converted value if it exists, or defaultValue
      */
@@ -72,7 +72,7 @@ public class TypeCast {
      * TypeCast.toLong(null, -1)); // Return：-1，Not：0
      * TypeCast.toLong("", -1)); // Return：-1，Not：0
      *
-     * @param value        a Object
+     * @param value        an Object
      * @param defaultValue Value to return if value is null、empty or convert failure.
      * @return Returns the converted value if it exists, or defaultValue
      */
@@ -100,7 +100,7 @@ public class TypeCast {
      * TypeCast.toFloat(null, -1.0f)); // Return：-1.0f，Not：0
      * TypeCast.toFloat("", -1.0f)); // Return：-1.0f，Not：0
      *
-     * @param value        a Object
+     * @param value        an Object
      * @param defaultValue Value to return if value is null、empty or convert failure.
      * @return Returns the converted value if it exists, or defaultValue
      */
@@ -123,7 +123,7 @@ public class TypeCast {
      * TypeCast.toDouble(null, -1.0)); // Return：-1.0，Not：0
      * TypeCast.toDouble("", -1.0)); // Return：-1.0，Not：0
      *
-     * @param value        a Object
+     * @param value        an Object
      * @param defaultValue Value to return if value is null、empty or convert failure.
      * @return Returns the converted value if it exists, or defaultValue
      */
@@ -201,7 +201,7 @@ public class TypeCast {
     /**
      * Convert Integer to Ip Address
      *
-     * @param value a Integer
+     * @param value an Integer
      * @return Returns the converted value if it exists, or null
      */
     public static String toIp(int value) {

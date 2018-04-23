@@ -44,7 +44,7 @@ public class ViewInjectProcessor {
     /**
      * 处理Activity注解
      *
-     * @param obj an Activity object
+     * @param obj an Activity Object
      */
     public static void process(Activity obj) {
         if (obj == null) {
@@ -57,7 +57,7 @@ public class ViewInjectProcessor {
     /**
      * 处理注解
      *
-     * @param obj       a Fragment object, or an Activity object, or an User Declared ViewHolder
+     * @param obj       a Fragment Object, or an Activity Object, or an User Declared ViewHolder
      * @param container 父视图
      * @throws IllegalArgumentException the obj is null
      * @throws IllegalArgumentException the container is null

@@ -96,6 +96,13 @@ public class Registry {
 
     /**
      * 初始化上下文环境、包名、Db名、Db对象
+     */
+    public Registry(Context c) {
+        this(c, null);
+    }
+
+    /**
+     * 初始化上下文环境、包名、Db名、Db对象
      *
      * @param c         上下文环境
      * @param dbPostfix Db名的后缀，Db名：包名 + 后缀名
