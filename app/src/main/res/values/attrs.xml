@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundedImageView">
+        <attr name="cornerRadius_leftTop" format="dimension" />
+        <attr name="cornerRadius_rightTop" format="dimension" />
+        <attr name="cornerRadius_rightBottom" format="dimension" />
+        <attr name="cornerRadius_leftBottom" format="dimension" />
+        <attr name="isCircular" format="boolean" />
+    </declare-styleable>
+</resources>

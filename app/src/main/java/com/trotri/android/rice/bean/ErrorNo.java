@@ -17,14 +17,14 @@
 package com.trotri.android.rice.bean;
 
 /**
- * ErrorNo final class file
+ * ErrorNo class file
  * 常用错误码类
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: ErrorNo.java 1 2016-01-08 10:00:06Z huan.song $
  * @since 1.0
  */
-public final class ErrorNo {
+public class ErrorNo {
     /**
      * OK
      */

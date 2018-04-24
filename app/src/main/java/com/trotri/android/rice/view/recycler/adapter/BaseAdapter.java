@@ -270,7 +270,7 @@ public abstract class BaseAdapter extends RecyclerView.Adapter {
     /**
      * 获取上下文环境
      *
-     * @return an Application Context
+     * @return an Application Context Object
      */
     public Context getAppContext() {
         return mAppContext;

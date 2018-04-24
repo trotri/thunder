@@ -17,8 +17,6 @@
 package com.trotri.android.rice.js;
 
 import android.content.Context;
-import android.os.Handler;
-import android.os.Looper;
 import android.text.TextUtils;
 
 import com.google.gson.Gson;
@@ -26,6 +24,7 @@ import com.google.gson.JsonSyntaxException;
 import com.trotri.android.rice.bean.Constants;
 import com.trotri.android.rice.util.GsonHelper;
 import com.trotri.android.thunder.ap.Logger;
+import com.trotri.android.thunder.ap.UiThread;
 
 /**
  * Bridge class file
@@ -80,11 +79,6 @@ public class Bridge {
     public static final String JSON_SYNTAX_ERR_MSG = "Js parameter json syntax exception";
 
     /**
-     * 主线程
-     */
-    private static Handler mMainHandler = new Handler(Looper.getMainLooper());
-
-    /**
      * 用于解析参数和回调数据
      */
     private final Gson mGson;
@@ -131,7 +125,7 @@ public class Bridge {
      * @param key 寄存回调函数的Key
      */
     public void loadMethodNotFoundException(String key) {
-        Logger.e(Constants.TAG_LOG, TAG + " loadMethodNotFoundException " + METHOD_NOT_FOUND_ERR_MSG);
+        Logger.e(Constants.TAG_LOG, TAG + " loadMethodNotFoundException() " + METHOD_NOT_FOUND_ERR_MSG);
         loadListen(key, null, METHOD_NOT_FOUND_ERR_NO, METHOD_NOT_FOUND_ERR_MSG);
     }
 
@@ -141,7 +135,7 @@ public class Bridge {
      * @param key 寄存回调函数的Key
      */
     public void loadJsonSyntaxException(String key) {
-        Logger.e(Constants.TAG_LOG, TAG + " loadJsonSyntaxException " + JSON_SYNTAX_ERR_MSG);
+        Logger.e(Constants.TAG_LOG, TAG + " loadJsonSyntaxException() " + JSON_SYNTAX_ERR_MSG);
         loadListen(key, null, JSON_SYNTAX_ERR_NO, JSON_SYNTAX_ERR_MSG);
     }
 
@@ -192,10 +186,10 @@ public class Bridge {
      * @param code Js代码，需要"javascript:"前缀
      */
     public void loadJs(final String code) {
-        Logger.d(Constants.TAG_LOG, TAG + " loadJs " + code);
-        mMainHandler.post(new Runnable() {
+        Logger.d(Constants.TAG_LOG, TAG + " loadJs() " + code);
+        UiThread.exec(new UiThread.AbstractCommand() {
             @Override
-            public void run() {
+            public void exec() {
                 mWebView.loadUrl(code);
             }
         });

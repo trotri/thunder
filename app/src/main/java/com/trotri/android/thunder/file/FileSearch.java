@@ -150,7 +150,7 @@ public class FileSearch {
                     continue;
                 }
 
-                Logger.i(Constants.TAG_LOG, TAG + " Tree - " + (f.isDirectory() ? "d" : "-") + " : " + leftPad + f.getAbsolutePath());
+                Logger.i(Constants.TAG_LOG, TAG + " sendDirectoryTreeToInfoLog() Tree - " + (f.isDirectory() ? "d" : "-") + " : " + leftPad + f.getAbsolutePath());
 
                 if (f.isDirectory() && recursive) {
                     sendDirectoryTreeToInfoLog(f, true, leftPad + leftPad);

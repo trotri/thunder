@@ -83,7 +83,7 @@ public class DbRetrofit {
     /**
      * 获取DbRetrofit辅助类
      *
-     * @return DbRetrofit辅助类，a Helper object
+     * @return DbRetrofit辅助类，a Helper Object
      */
     public Helper getHelper() {
         return mHelper;
@@ -123,7 +123,7 @@ public class DbRetrofit {
         /**
          * 设置Gson对象
          *
-         * @param gson a Gson object
+         * @param gson a Gson Object
          * @return This Builder object to allow for chaining of calls to set methods
          */
         public DbRetrofit.Builder setGson(Gson gson) {

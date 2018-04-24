@@ -18,6 +18,7 @@ package com.trotri.android.rice.util;
 
 import android.content.Context;
 
+import com.trotri.android.rice.db.DbStorage;
 import com.trotri.android.rice.db.retrofit.DbRetrofit;
 
 /**
@@ -67,6 +68,7 @@ public class DbRetrofitBuilder {
 
     /**
      * 设置Db名的后缀
+     * 默认：{@link DbStorage.DEFAULT_DB_POSTFIX}
      *
      * @param dbPostfix Db名的后缀，Db名：包名 + 后缀名
      * @return Returns a reference to the same RetrofitBuilder object, so you can chain put calls together.
