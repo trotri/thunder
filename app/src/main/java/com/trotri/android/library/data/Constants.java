@@ -51,11 +51,6 @@ public final class Constants {
     public static final String TAG_LOG = TAG + "-" + VERSION;
 
     /**
-     * 服务器根URL
-     */
-    public static final String BASE_URL = "http://10.0.1.11:8080/WebSample/";
-
-    /**
      * 操作系统
      */
     public static final String OS = "android";

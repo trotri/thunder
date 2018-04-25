@@ -16,8 +16,6 @@
 
 package com.trotri.android.rice.util;
 
-import com.google.gson.GsonBuilder;
-
 import java.io.IOException;
 
 import okhttp3.FormBody;
@@ -72,7 +70,7 @@ public class RetrofitBuilder {
 
         Retrofit.Builder builder = new Retrofit.Builder()
                 .baseUrl(mBaseUrl)
-                .addConverterFactory(GsonConverterFactory.create(new GsonBuilder().create()))
+                .addConverterFactory(GsonConverterFactory.create(GsonHelper.create()))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(client);
 

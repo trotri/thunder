@@ -16,6 +16,8 @@
 
 package com.trotri.android.library.base;
 
+import com.trotri.android.java.sample.R;
+import com.trotri.android.library.App;
 import com.trotri.android.library.data.Constants;
 import com.trotri.android.rice.util.RetrofitBuilder;
 
@@ -46,13 +48,22 @@ public abstract class BaseHttp {
     public static Retrofit getRetrofit() {
         if (sRetrofit == null) {
             sRetrofit = new RetrofitBuilder()
-                    .baseUrl(Constants.BASE_URL)
+                    .baseUrl(baseUrl())
                     .addQuery("version", Constants.VERSION)
                     .addQuery("os", Constants.OS)
                     .build();
         }
 
         return sRetrofit;
+    }
+
+    /**
+     * Obtain Base Url
+     *
+     * @return Base Url
+     */
+    public static String baseUrl() {
+        return App.getContext().getString(R.string.base_url);
     }
 
 }

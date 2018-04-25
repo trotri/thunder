@@ -47,16 +47,17 @@ public abstract class AbstractListProcessor<T> extends AbstractDataProcessor {
     /**
      * 请求列表数据
      *
+     * @param refresh 是否是下拉刷新，下拉刷新时：refresh = true
      * @return 结果集，an Observable<RequestAdapter.ResultList<T>> Object
      */
-    protected abstract Observable<RequestAdapter.ResultList<T>> request();
+    protected abstract Observable<RequestAdapter.ResultList<T>> request(boolean refresh);
 
     /**
      * 请求数据
      *
-     * @param reset 是否清空当前数据，下拉刷新时：reset = true
+     * @param refresh 是否是下拉刷新，下拉刷新时：refresh = true
      */
-    public void load(final boolean reset) {
+    public void load(final boolean refresh) {
         if (mLoading) {
             return;
         }
@@ -64,11 +65,11 @@ public abstract class AbstractListProcessor<T> extends AbstractDataProcessor {
         mLoading = true;
         post(BIND_STATUS.LOADING.name());
 
-        if (reset) {
+        if (refresh) {
             clear();
         }
 
-        request().subscribe(new Consumer<RequestAdapter.ResultList<T>>() {
+        request(refresh).subscribe(new Consumer<RequestAdapter.ResultList<T>>() {
             @Override
             public void accept(RequestAdapter.ResultList<T> result) throws Exception {
                 processResult(result);
@@ -76,7 +77,7 @@ public abstract class AbstractListProcessor<T> extends AbstractDataProcessor {
         }, new Consumer<Throwable>() {
             @Override
             public void accept(Throwable tr) throws Exception {
-                Logger.e(Constants.TAG_LOG, TAG + " load() reset: " + reset, tr);
+                Logger.e(Constants.TAG_LOG, TAG + " load() refresh: " + refresh, tr);
                 processResult(null);
             }
         });

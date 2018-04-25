@@ -5,4 +5,85 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Wrapper">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingBottom">@dimen/wrapper_vertical_margin</item>
+        <item name="android:paddingLeft">@dimen/wrapper_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/wrapper_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/wrapper_vertical_margin</item>
+    </style>
+
+    <style name="LLayWrapper" parent="Wrapper">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LLayRowWrapper">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/row_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="WeightRowCell">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="WeightRowLeftCell" parent="WeightRowCell">
+        <item name="android:gravity">end</item>
+    </style>
+
+    <style name="TvTitleBar" parent="LLayRowWrapper">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="BtnSubmitBar">
+        <item name="android:layout_width">@dimen/button_width</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+    </style>
+
+    <style name="BookListTitle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">5</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/text_size_list_title</item>
+    </style>
+
+    <style name="BookListDtCreated">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
+    <style name="BookDetailTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/row_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/text_size_detail_title</item>
+    </style>
+
+    <style name="BookDetailDtCreated">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/text_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
+    <style name="BookDetailUnderline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/underline_height</item>
+        <item name="android:background">@android:color/background_dark</item>
+    </style>
+
+    <style name="BookDetailDescription">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/wrapper_vertical_margin</item>
+        <item name="android:textSize">@dimen/text_size_detail_title</item>
+    </style>
+
 </resources>

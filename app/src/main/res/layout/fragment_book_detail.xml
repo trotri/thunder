@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.trotri.android.java.sample.data.bean.BookBean" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/wrapper_vertical_margin"
+        android:paddingLeft="@dimen/wrapper_horizontal_margin"
+        android:paddingRight="@dimen/wrapper_horizontal_margin"
+        android:paddingTop="@dimen/wrapper_vertical_margin">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/BookDetailTitle"
+            android:text="@{bean.getTitle()}" />
+
+        <TextView
+            android:id="@+id/tv_dt_created"
+            style="@style/BookDetailDtCreated"
+            android:text="@{bean.getDtCreated()}" />
+
+        <View style="@style/BookDetailUnderline" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            style="@style/BookDetailDescription"
+            android:text="@{bean.getDescription()}" />
+
+    </LinearLayout>
+
+</layout>

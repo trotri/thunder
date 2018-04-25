@@ -49,7 +49,7 @@ public final class Logger {
     /**
      * 报告日志接口
      */
-    private static OnReportListener mReportListener = null;
+    private static OnReportListener sReportListener = null;
 
     /**
      * 是否关闭日志输出，True：关闭日志输出、False：打开日志输出
@@ -220,11 +220,11 @@ public final class Logger {
             return;
         }
 
-        if (mReportListener == null) {
+        if (sReportListener == null) {
             return;
         }
 
-        mReportListener.onReport(priority, tag, msg);
+        sReportListener.onReport(priority, tag, msg);
     }
 
     /**
@@ -233,7 +233,7 @@ public final class Logger {
      * @param listener a OnReportListener to report log
      */
     public static void setOnReportListener(OnReportListener listener) {
-        mReportListener = listener;
+        sReportListener = listener;
     }
 
     /**

@@ -105,7 +105,11 @@ public class Util {
         return Observable.create(new ObservableOnSubscribe<T>() {
             @Override
             public void subscribe(ObservableEmitter<T> e) throws Exception {
-                e.onNext(value);
+                if (value != null) {
+                    e.onNext(value);
+                } else {
+                    e.onError(new Throwable("db is null"));
+                }
             }
         });
     }

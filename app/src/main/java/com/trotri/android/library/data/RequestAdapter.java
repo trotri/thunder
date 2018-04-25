@@ -223,4 +223,38 @@ public final class RequestAdapter {
 
     }
 
+    /**
+     * 是否有错误
+     *
+     * @param result 结果数据
+     * @param <T>    数据类型，a Bean type
+     * @return Returns True, or False
+     */
+    public static <T> boolean hasErr(RequestAdapter.Result<T> result) {
+        return (result == null) || (result.getErrNo() != ErrorNo.SUCCESS_NUM) || (result.getData() == null);
+    }
+
+    /**
+     * 结果数据日志
+     *
+     * @param result 结果数据
+     * @param <T>    数据类型，a Bean type
+     * @return 日志
+     */
+    public static <T> String toLog(RequestAdapter.Result<T> result) {
+        if (result == null) {
+            return "result is null";
+        }
+
+        if (result.getErrNo() != ErrorNo.SUCCESS_NUM) {
+            return "result has err, result: " + result.toString();
+        }
+
+        if (result.getData() == null) {
+            return "result no is success, data is null";
+        }
+
+        return "result is ok";
+    }
+
 }

@@ -29,6 +29,23 @@ import java.lang.reflect.Type;
 /**
  * DbRetrofit class file
  * 类似Retrofit，处理Db相关操作
+ * <pre>
+ * public interface IBook {
+ *     @GET("book_list")
+ *     Observable<RequestAdapter.ResultList<BookBean>> findRows();
+ *
+ *     @SET("book_list")
+ *     boolean putRows(RequestAdapter.ResultList<BookBean> value);
+ *
+ *     @GET("book_id_")
+ *     Observable<RequestAdapter.Result<BookBean>> getRow(long id);
+ *
+ *     @SET("book_id_")
+ *     boolean setRow(long id, RequestAdapter.Result<BookBean> value);
+ * }
+ *
+ * IBook db = new DbRetrofitBuilder(App.getContext()).build().create(IBook.class);
+ * </pre>
  * 需要包：
  * compile 'com.google.code.gson:gson:2.8.0'
  * compile 'io.reactivex.rxjava2:rxjava:2.1.7'
@@ -54,7 +71,7 @@ public class DbRetrofit {
      * @param <T>     返回值类型，泛型
      * @return 动态代理的方法的返回值，获取数据：返回object或Observable<object>、设置数据：返回boolean
      */
-    @SuppressWarnings("unchecked") // Single-interface proxy creation guarded by parameter safety.
+    @SuppressWarnings("unchecked")
     public <T> T create(Class<T> service) {
         return (T) Proxy.newProxyInstance(service.getClassLoader(), new Class<?>[]{service}, new InvocationHandler() {
             @Override

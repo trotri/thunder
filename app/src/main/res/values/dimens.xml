@@ -1,0 +1,22 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="wrapper_horizontal_margin">16dp</dimen>
+    <dimen name="wrapper_vertical_margin">16dp</dimen>
+    <dimen name="button_width">192dp</dimen>
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="row_height">48dp</dimen>
+    <dimen name="underline_height">1dp</dimen>
+    <dimen name="browser_progressbar_height">4dp</dimen>
+    <dimen name="text_height">32dp</dimen>
+    <dimen name="text_size">14sp</dimen>
+    <dimen name="text_size_error_tips">16sp</dimen>
+    <dimen name="text_size_list_title">18sp</dimen>
+    <dimen name="text_size_detail_title">24sp</dimen>
+
+    <dimen name="rounded_image_view_layout_width">225dp</dimen>
+    <dimen name="rounded_image_view_layout_height">122dp</dimen>
+    <dimen name="rounded_image_view_cornerRadius_leftTop">16dp</dimen>
+    <dimen name="rounded_image_view_cornerRadius_rightTop">32dp</dimen>
+    <dimen name="rounded_image_view_cornerRadius_rightBottom">48dp</dimen>
+    <dimen name="rounded_image_view_cornerRadius_leftBottom">64dp</dimen>
+</resources>

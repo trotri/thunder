@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.trotri.android.java.sample.data.bean.ButtonPanelBean.Item" />
+
+        <variable
+            name="view"
+            type="com.trotri.android.java.sample.view.ButtonPanelFragment" />
+
+    </data>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:gravity="center"
+        android:onClick="@{() -> view.onButtonPanelItemClick(item.getId())}"
+        android:text="@{String.valueOf(item.getName())}" />
+
+</layout>

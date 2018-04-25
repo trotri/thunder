@@ -1,3 +1,66 @@
 <resources>
     <string name="app_name">Thunder</string>
+
+    <string name="data_adapter">Data Adapter</string>
+
+    <string name="rounded_image_view">Rounded ImageView</string>
+
+    <string name="boolean_true">True</string>
+    <string name="boolean_false">False</string>
+    <string name="undefined">Undefined</string>
+    <string name="text_view_result">Result</string>
+    <string name="text_view_form">Form</string>
+    <string name="button_submit">Submit</string>
+
+    <string name="registry_int">Int：</string>
+    <string name="registry_string">String：</string>
+    <string name="registry_long">Long：</string>
+    <string name="registry_float">Float：</string>
+    <string name="registry_boolean">Boolean：</string>
+
+    <string name="version_code">版本号：</string>
+    <string name="version_name">版本名：</string>
+
+    <string name="display_pixels_width">屏幕X轴像素点个数：</string>
+    <string name="display_pixels_height">屏幕Y轴像素点个数：</string>
+    <string name="display_pixels_density">屏幕逻辑密度：</string>
+    <string name="display_pixels_dpi">屏幕每英寸物理像素点个数：</string>
+    <string name="display_pixels_xdpi">屏幕X轴每英寸物理像素点个数：</string>
+    <string name="display_pixels_ydpi">屏幕Y轴每英寸物理像素点个数：</string>
+
+    <string name="file_name">文件名：</string>
+    <string name="content">内容：</string>
+    <string name="write_data">重新写入：</string>
+    <string name="append_write_data">追加写入：</string>
+
+    <string name="network_available">Network Available：</string>
+    <string name="network_wifi">Network Wifi：</string>
+
+    <string name="is_access_fine_location_granted">ACCESS_FINE_LOCATION权限：</string>
+    <string name="is_access_coarse_location_granted">ACCESS_COARSE_LOCATION权限：</string>
+    <string name="is_gps_enabled">是否开启GPS：</string>
+    <string name="is_passive_enabled">是否支持位置更新监测器：</string>
+    <string name="is_network_enabled">是否支持基站或Wifi获取位置信息：</string>
+    <string name="to_setting">To Setting</string>
+
+    <string name="dimension_dp">DP：</string>
+    <string name="dimension_px">PX：</string>
+    <string name="dimension_sp">SP：</string>
+    <string name="arrow_right">-></string>
+
+    <string name="contacts_id">ID：</string>
+    <string name="contacts_display_name">Name：</string>
+    <string name="contacts_phone_numbers">Phones：</string>
+    <string name="contacts_emails">Emails：</string>
+
+    <string name="tips_sd_card_path">SD Card Directory：</string>
+    <string name="tips_sd_card_permission_denied">SD Card Permission Denied</string>
+    <string name="tips_sd_card_not_exists">SD Card Not Exists</string>
+    <string name="tips_fragment_not_exists">Fragment Not Exists</string>
+
+    <string name="browser_received_error">点击屏幕，重新加载</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
