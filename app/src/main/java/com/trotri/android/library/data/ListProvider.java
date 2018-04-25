@@ -226,6 +226,14 @@ public class ListProvider<T> {
     }
 
     /**
+     * 设置首页页查询起始位置
+     * SELECT * FROM table LIMIT [offset], limit;
+     */
+    public void setOffsetToFirstPage() {
+        mOffset = 0;
+    }
+
+    /**
      * 设置下一页查询起始位置
      * SELECT * FROM table LIMIT [offset], limit;
      *
@@ -274,7 +282,7 @@ public class ListProvider<T> {
     public void clear() {
         setTotal(0);
         mNull = 0;
-        setOffset(0);
+        setOffsetToFirstPage();
         mRows = null;
     }
 

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.trotri.android.java.sample.data.bean.RegistryBean" />
+
+    </data>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/TvTitleBar"
+                android:text="@string/text_view_result" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/RegistryLeftCell"
+                android:text="@string/registry_int" />
+
+            <TextView
+                android:id="@+id/tv_registry_int"
+                style="@style/RegistryRightCell"
+                android:text="@{String.valueOf(bean.mIntValue)}" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/RegistryLeftCell"
+                android:text="@string/registry_string" />
+
+            <TextView
+                android:id="@+id/tv_registry_string"
+                style="@style/RegistryRightCell"
+                android:text="@{bean.mStrValue}" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/RegistryLeftCell"
+                android:text="@string/registry_long" />
+
+            <TextView
+                android:id="@+id/tv_registry_long"
+                style="@style/RegistryRightCell"
+                android:text="@{String.valueOf(bean.mLongValue)}" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/RegistryLeftCell"
+                android:text="@string/registry_float" />
+
+            <TextView
+                android:id="@+id/tv_registry_float"
+                style="@style/RegistryRightCell"
+                android:text="@{String.valueOf(bean.mFloatValue)}" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/RegistryLeftCell"
+                android:text="@string/registry_boolean" />
+
+            <TextView
+                android:id="@+id/tv_registry_boolean"
+                style="@style/RegistryRightCell"
+                android:text="@{String.valueOf(bean.mBoolValue)}" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/TvTitleBar"
+                android:text="@string/text_view_form" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/RegistryLeftCell"
+                android:text="@string/registry_int" />
+
+            <EditText
+                android:id="@+id/et_registry_int"
+                style="@style/RegistryRightCell"
+                android:inputType="number"
+                android:text="@{String.valueOf(bean.mIntValue)}" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/RegistryLeftCell"
+                android:text="@string/registry_string" />
+
+            <EditText
+                android:id="@+id/et_registry_string"
+                style="@style/RegistryRightCell"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@{bean.mStrValue}" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/RegistryLeftCell"
+                android:text="@string/registry_long" />
+
+            <EditText
+                android:id="@+id/et_registry_long"
+                style="@style/RegistryRightCell"
+                android:ems="3"
+                android:inputType="number"
+                android:text="@{String.valueOf(bean.mLongValue)}" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/RegistryLeftCell"
+                android:text="@string/registry_float" />
+
+            <EditText
+                android:id="@+id/et_registry_float"
+                style="@style/RegistryRightCell"
+                android:ems="3"
+                android:inputType="numberDecimal"
+                android:text="@{String.valueOf(bean.mFloatValue)}" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/RegistryLeftCell"
+                android:text="@string/registry_boolean" />
+
+            <RadioGroup
+                android:id="@+id/rg_registry_boolean_group"
+                style="@style/RegistryRgBooleanGroup">
+
+                <RadioButton
+                    android:id="@+id/rb_registry_boolean_true"
+                    style="@style/RegistryRbBooleanLeftCell"
+                    android:checked="@{bean.mBoolValue}"
+                    android:text="@string/boolean_true" />
+
+                <RadioButton
+                    android:id="@+id/rb_registry_boolean_false"
+                    style="@style/RegistryRbBooleanRightCell"
+                    android:checked="@{!bean.mBoolValue}"
+                    android:text="@string/boolean_false" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_submit"
+                style="@style/BtnSubmitBar"
+                android:text="@string/button_submit" />
+        </TableRow>
+
+    </TableLayout>
+
+</layout>

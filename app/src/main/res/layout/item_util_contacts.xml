@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.trotri.android.java.sample.data.bean.ContactsBean"/>
+
+    </data>
+
+    <LinearLayout
+        style="@style/LLayWrapper"
+        android:layout_height="wrap_content">
+
+        <LinearLayout style="@style/UtilContactsRowWrapper">
+
+            <TextView
+                style="@style/UtilContactsLeftCell"
+                android:text="@string/contacts_id"/>
+
+            <TextView
+                android:id="@+id/tv_id"
+                style="@style/UtilContactsRightCell"
+                android:text="@{String.valueOf(item.getId())}"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/UtilContactsRowWrapper">
+
+            <TextView
+                style="@style/UtilContactsLeftCell"
+                android:text="@string/contacts_display_name"/>
+
+            <TextView
+                android:id="@+id/tv_display_name"
+                style="@style/UtilContactsRightCell"
+                android:text="@{String.valueOf(item.getDisplayName())}"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/UtilContactsRowWrapper">
+
+            <TextView
+                style="@style/UtilContactsLeftCell"
+                android:text="@string/contacts_phone_numbers"/>
+
+            <TextView
+                android:id="@+id/tv_phone_numbers"
+                style="@style/UtilContactsRightCell"
+                android:text="@{String.valueOf(item.getPhoneNumbers())}"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/UtilContactsRowWrapper">
+
+            <TextView
+                style="@style/UtilContactsLeftCell"
+                android:text="@string/contacts_emails"/>
+
+            <TextView
+                android:id="@+id/tv_emails"
+                style="@style/UtilContactsRightCell"
+                android:text="@{String.valueOf(item.getEmails())}"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

@@ -2,12 +2,18 @@ package com.trotri.android.java.sample;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import com.trotri.android.java.sample.data.bean.ButtonPanelBean;
 import com.trotri.android.java.sample.view.BookDetailFragment;
+import com.trotri.android.java.sample.view.BookListFragment;
 import com.trotri.android.java.sample.view.ButtonPanelFragment;
+import com.trotri.android.java.sample.view.DbRegistryFragment;
 import com.trotri.android.java.sample.view.ErrorFragment;
+import com.trotri.android.java.sample.view.RoundedImageViewFragment;
+import com.trotri.android.java.sample.view.UtilContactsFragment;
+import com.trotri.android.java.sample.view.UtilRegistryFragment;
 import com.trotri.android.library.base.BaseActivity;
 
 import java.util.Map;
@@ -23,10 +29,16 @@ import java.util.Map;
 public class MainActivity extends BaseActivity {
 
     private final static String BUTTON_ID = "button_id";
+    private final static String DATA = "data";
 
     public static void actionStart(Context c, int buttonId) {
+        actionStart(c, buttonId, null);
+    }
+
+    public static void actionStart(Context c, int buttonId, Bundle data) {
         Intent intent = new Intent(c, MainActivity.class);
         intent.putExtra(BUTTON_ID, buttonId);
+        intent.putExtra(DATA, data);
         c.startActivity(intent);
     }
 
@@ -38,11 +50,23 @@ public class MainActivity extends BaseActivity {
     @Override
     protected Fragment newFragment() {
         int buttonId = getIntent().getIntExtra(BUTTON_ID, ButtonPanelBean.BUTTON_PANEL);
+        Bundle data = getIntent().getBundleExtra(DATA);
+
         switch (buttonId) {
             case ButtonPanelBean.BUTTON_PANEL:
                 return ButtonPanelFragment.newInstance();
-            case ButtonPanelBean.DATA_ADAPTER:
-                return BookDetailFragment.newInstance(2);
+            case ButtonPanelBean.BOOK_LIST:
+                return BookListFragment.newInstance();
+            case ButtonPanelBean.BOOK_DETAIL:
+                return BookDetailFragment.newInstance(data);
+            case ButtonPanelBean.ROUNDED_IMAGE_VIEW:
+                return RoundedImageViewFragment.newInstance();
+            case ButtonPanelBean.UTIL_CONTACTS:
+                return UtilContactsFragment.newInstance();
+            case ButtonPanelBean.UTIL_REGISTRY:
+                return UtilRegistryFragment.newInstance();
+            case ButtonPanelBean.DB_REGISTRY:
+                return DbRegistryFragment.newInstance();
             default:
                 break;
         }

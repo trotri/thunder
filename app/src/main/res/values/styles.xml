@@ -43,6 +43,7 @@
         <item name="android:layout_height">@dimen/button_height</item>
     </style>
 
+    <!-- Book -->
     <style name="BookListTitle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
@@ -84,6 +85,56 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginTop">@dimen/wrapper_vertical_margin</item>
         <item name="android:textSize">@dimen/text_size_detail_title</item>
+    </style>
+
+    <!-- RoundedImageView -->
+    <style name="RoundedImageViewRow">
+        <item name="android:layout_width">@dimen/rounded_image_view_layout_width</item>
+        <item name="android:layout_height">@dimen/rounded_image_view_layout_height</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/wrapper_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/wrapper_vertical_margin</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@mipmap/totoro</item>
+        <item name="android:contentDescription">@null</item>
+    </style>
+
+    <!-- Util Contacts -->
+    <style name="UtilContactsRowWrapper" parent="LLayRowWrapper"></style>
+
+    <style name="UtilContactsLeftCell" parent="WeightRowLeftCell">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="UtilContactsRightCell" parent="WeightRowCell">
+        <item name="android:layout_weight">2</item>
+    </style>
+
+    <!-- Util Registry Or Db Registry -->
+    <style name="RegistryLeftCell" parent="WeightRowLeftCell">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="RegistryRightCell" parent="WeightRowCell">
+        <item name="android:layout_weight">2</item>
+    </style>
+
+    <style name="RegistryRgBooleanGroup" parent="RegistryRightCell">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="RegistryRbBooleanLeftCell">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="RegistryRbBooleanRightCell">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/wrapper_horizontal_margin</item>
+        <item name="android:checked">true</item>
     </style>
 
 </resources>

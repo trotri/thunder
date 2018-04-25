@@ -13,8 +13,12 @@ public final class ButtonPanelBean {
      * 按钮Id
      */
     public static final int BUTTON_PANEL = 1;
-    public static final int DATA_ADAPTER = 100;
+    public static final int BOOK_LIST = 100;
+    public static final int BOOK_DETAIL = 101;
     public static final int ROUNDED_IMAGE_VIEW = 200;
+    public static final int UTIL_CONTACTS = 300;
+    public static final int UTIL_REGISTRY = 301;
+    public static final int DB_REGISTRY = 302;
 
     /**
      * Item final class

@@ -1,9 +1,14 @@
 package com.trotri.android.java.sample.view.vm.processor;
 
+import android.util.Log;
+
 import com.trotri.android.java.sample.data.BookService;
 import com.trotri.android.java.sample.data.bean.BookBean;
 import com.trotri.android.library.data.AbstractListProcessor;
 import com.trotri.android.library.data.RequestAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import io.reactivex.Observable;
 
@@ -27,10 +32,29 @@ public class BookListProcessor extends AbstractListProcessor<BookBean> {
     @Override
     protected Observable<RequestAdapter.ResultList<BookBean>> request(boolean refresh) {
         if (refresh) {
-            return mService.findRowsFromHttp(getOffset(), getLimit(), true);
+            return mService.findRowsFromHttp(getOffset(), getLimit(), false);
         }
 
         return mService.findRows(getOffset(), getLimit());
+    }
+
+    /**
+     * 获取分类列表
+     *
+     * @return 分类列表，a List<String> Object
+     */
+    public List<String> getTypes() {
+        List<String> result = new ArrayList<>();
+
+        int size = getSize();
+        for (int i = 0; i < size; i++) {
+            BookBean item = getItem(i);
+            if (item != null) {
+                result.add(item.getType());
+            }
+        }
+
+        return result;
     }
 
 }

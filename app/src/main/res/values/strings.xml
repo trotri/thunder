@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">Thunder</string>
 
-    <string name="data_adapter">Data Adapter</string>
-
+    <string name="book_list">Book List</string>
     <string name="rounded_image_view">Rounded ImageView</string>
+    <string name="util_contacts">Util Contacts</string>
+    <string name="util_registry">Util Registry</string>
+    <string name="db_registry">Db Registry</string>
 
     <string name="boolean_true">True</string>
     <string name="boolean_false">False</string>

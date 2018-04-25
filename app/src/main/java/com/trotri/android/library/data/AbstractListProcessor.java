@@ -17,7 +17,6 @@
 package com.trotri.android.library.data;
 
 import com.trotri.android.rice.base.AbstractDataProcessor;
-import com.trotri.android.thunder.ap.Logger;
 
 import io.reactivex.Observable;
 import io.reactivex.functions.Consumer;
@@ -66,19 +65,18 @@ public abstract class AbstractListProcessor<T> extends AbstractDataProcessor {
         post(BIND_STATUS.LOADING.name());
 
         if (refresh) {
-            clear();
+            setOffsetToFirstPage();
         }
 
         request(refresh).subscribe(new Consumer<RequestAdapter.ResultList<T>>() {
             @Override
             public void accept(RequestAdapter.ResultList<T> result) throws Exception {
-                processResult(result);
+                processResult(refresh, result);
             }
         }, new Consumer<Throwable>() {
             @Override
             public void accept(Throwable tr) throws Exception {
-                Logger.e(Constants.TAG_LOG, TAG + " load() refresh: " + refresh, tr);
-                processResult(null);
+                processResult(refresh, null);
             }
         });
     }
@@ -86,9 +84,10 @@ public abstract class AbstractListProcessor<T> extends AbstractDataProcessor {
     /**
      * 处理请求结果
      *
-     * @param result 请求结果，a RequestAdapter.ResultList<T> Object
+     * @param refresh 是否是下拉刷新，下拉刷新时：refresh = true
+     * @param result  请求结果，a RequestAdapter.ResultList<T> Object
      */
-    protected void processResult(RequestAdapter.ResultList<T> result) {
+    protected void processResult(boolean refresh, RequestAdapter.ResultList<T> result) {
         mLoading = false;
 
         // 请求失败，系统错误
@@ -238,6 +237,17 @@ public abstract class AbstractListProcessor<T> extends AbstractDataProcessor {
     public boolean hasMoreData() {
         ListProvider<T> provider = getProvider();
         return (provider != null) && provider.hasMoreData();
+    }
+
+    /**
+     * 设置首页页查询起始位置
+     * SELECT * FROM table LIMIT [offset], limit;
+     */
+    public void setOffsetToFirstPage() {
+        ListProvider<T> provider = getProvider();
+        if (provider != null) {
+            provider.setOffsetToFirstPage();
+        }
     }
 
     /**

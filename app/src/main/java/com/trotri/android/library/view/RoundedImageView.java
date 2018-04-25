@@ -24,7 +24,7 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.drawable.shapes.RoundRectShape;
 import android.util.AttributeSet;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import com.trotri.android.java.sample.R;
 import com.trotri.android.thunder.util.DimensionConverter;
@@ -46,7 +46,7 @@ import com.trotri.android.thunder.util.DimensionConverter;
  * @version $Id: RoundedImageView.java 1 2016-10-12 10:00:06Z huan.song $
  * @since 1.0
  */
-public class RoundedImageView extends TextView {
+public class RoundedImageView extends ImageView {
 
     public static final String TAG = "RoundedImageView";
 

@@ -11,4 +11,7 @@ import com.trotri.android.library.base.BaseViewModel;
  * @since 1.0
  */
 public class ErrorViewModel extends BaseViewModel {
+
+    public static final String TAG = "ErrorViewModel";
+
 }

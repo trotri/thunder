@@ -17,6 +17,7 @@
 package com.trotri.android.thunder.view;
 
 import android.content.Context;
+import android.support.v7.widget.LinearLayoutManager;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -27,6 +28,9 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.trotri.android.library.data.Constants;
+import com.trotri.android.thunder.ap.Logger;
+
 /**
  * SwipeUpRefreshLayout class file
  * 上拉加载更多提示布局
@@ -36,6 +40,9 @@ import android.widget.TextView;
  * @since 1.0
  */
 public class SwipeUpRefreshLayout extends FrameLayout {
+
+    public static final String TAG = "SwipeUpRefreshLayout";
+
     /**
      * 状态：加载中
      */
@@ -164,6 +171,34 @@ public class SwipeUpRefreshLayout extends FrameLayout {
         addView(mTvNoData);
 
         setStatus(STATUS_LOAD_MORE);
+    }
+
+    /**
+     * 准备加载，如果返回false，则不允许加载。
+     *
+     * @param layoutManager a LinearLayoutManager object
+     * @return Returns True, or False
+     */
+    public boolean loadReady(LinearLayoutManager layoutManager) {
+        if (isNoData()) {
+            return false;
+        }
+
+        if (isLoading()) {
+            return false;
+        }
+
+        if (layoutManager == null) {
+            Logger.e(Constants.TAG_LOG, TAG + " loadReady() LinearLayoutManager is null");
+            return false;
+        }
+
+        int showCount = layoutManager.getChildCount();
+        int lastPos = layoutManager.findLastVisibleItemPosition();
+        int totalCount = layoutManager.getItemCount();
+
+        Logger.d(Constants.TAG_LOG, TAG + " loadReady() totalCount: " + totalCount + ", lastPos: " + lastPos + ", showCount: " + showCount);
+        return (lastPos + 1) >= totalCount;
     }
 
     /**

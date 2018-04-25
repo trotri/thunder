@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llay_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/wrapper_vertical_margin"
+            android:paddingTop="@dimen/wrapper_vertical_margin">
+
+            <ImageView
+                style="@style/RoundedImageViewRow"
+                android:contentDescription="@null" />
+
+            <com.trotri.android.library.view.RoundedImageView style="@style/RoundedImageViewRow" />
+
+            <com.trotri.android.library.view.RoundedImageView
+                style="@style/RoundedImageViewRow"
+                app:cornerRadius_leftBottom="@dimen/rounded_image_view_cornerRadius_leftBottom"
+                app:cornerRadius_leftTop="@dimen/rounded_image_view_cornerRadius_leftTop"
+                app:cornerRadius_rightBottom="@dimen/rounded_image_view_cornerRadius_rightBottom"
+                app:cornerRadius_rightTop="@dimen/rounded_image_view_cornerRadius_rightTop"
+                app:isCircular="false" />
+
+            <com.trotri.android.library.view.RoundedImageView
+                style="@style/RoundedImageViewRow"
+                app:cornerRadius_leftBottom="@dimen/rounded_image_view_cornerRadius_leftBottom"
+                app:cornerRadius_leftTop="@dimen/rounded_image_view_cornerRadius_leftTop"
+                app:cornerRadius_rightBottom="@dimen/rounded_image_view_cornerRadius_rightBottom"
+                app:cornerRadius_rightTop="@dimen/rounded_image_view_cornerRadius_rightTop"
+                app:isCircular="true" />
+
+            <com.trotri.android.library.view.RoundedImageView
+                style="@style/RoundedImageViewRow"
+                android:layout_width="@dimen/rounded_image_view_layout_height"
+                app:cornerRadius_leftBottom="@dimen/rounded_image_view_cornerRadius_leftBottom"
+                app:cornerRadius_leftTop="@dimen/rounded_image_view_cornerRadius_leftTop"
+                app:cornerRadius_rightBottom="@dimen/rounded_image_view_cornerRadius_rightBottom"
+                app:cornerRadius_rightTop="@dimen/rounded_image_view_cornerRadius_rightTop"
+                app:isCircular="true" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

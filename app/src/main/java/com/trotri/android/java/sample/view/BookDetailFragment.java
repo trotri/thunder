@@ -35,11 +35,11 @@ public class BookDetailFragment extends BaseFragment<BookDetailViewModel> {
 
     private long mBookId;
 
-    public static BaseFragment newInstance(long bookId) {
+    public static BaseFragment newInstance(Bundle data) {
         BaseFragment f = new BookDetailFragment();
 
         Bundle b = new Bundle();
-        b.putLong(KEY_BOOK_ID, bookId);
+        b.putLong(KEY_BOOK_ID, data.getLong(KEY_BOOK_ID));
 
         f.setArguments(b);
         return f;
@@ -68,6 +68,8 @@ public class BookDetailFragment extends BaseFragment<BookDetailViewModel> {
 
         mProcessor.load(mBookId);
     }
+
+
 
     public void onBind() {
         // 请求中，正在请求数据
