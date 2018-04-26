@@ -17,14 +17,9 @@
 package com.trotri.android.thunder.view;
 
 import android.annotation.SuppressLint;
-import android.os.Build;
-import android.text.TextUtils;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-
-import com.trotri.android.thunder.ap.Constants;
-import com.trotri.android.thunder.ap.Logger;
 
 import java.io.ByteArrayInputStream;
 
@@ -105,22 +100,9 @@ public class WebViewHelper {
      *
      * @param v a WebView Object
      */
-    private WebViewHelper(WebView v) {
+    public WebViewHelper(WebView v) {
         mWebView = v;
         onInitialize();
-    }
-
-    /**
-     * 获取已存在的实例，该实例是共享的，如果实例不存在，则创建新实例
-     */
-    public static WebViewHelper getInstance(WebView v) {
-        synchronized (INSTANCE_LOCK) {
-            if (sInstance == null) {
-                sInstance = new WebViewHelper(v);
-            }
-
-            return sInstance;
-        }
     }
 
     /**
@@ -177,64 +159,6 @@ public class WebViewHelper {
     }
 
     /**
-     * 加载URL，子线程中不可用
-     *
-     * @param url a URL String
-     */
-    public void loadUrl(String url) {
-        if (TextUtils.isEmpty(url)) {
-            Logger.e(Constants.TAG_LOG, TAG + " loadUrl() url is Empty");
-            return;
-        }
-
-        Logger.d(Constants.TAG_LOG, TAG + " loadUrl() url: " + url);
-
-        mWebView.loadUrl(url);
-    }
-
-    /**
-     * 加载HTML代码，子线程中不可用
-     *
-     * @param htmlCode HTML代码
-     * @param charset  字符编码
-     */
-    public void loadHtml(String htmlCode, String charset) {
-        if (TextUtils.isEmpty(htmlCode)) {
-            Logger.e(Constants.TAG_LOG, TAG + " loadHtml() htmlCode is Empty");
-            return;
-        }
-
-        charset = (charset == null) ? "" : charset.trim();
-        if (TextUtils.isEmpty(charset)) {
-            charset = DEFAULT_CHARSET;
-        }
-
-        Logger.d(Constants.TAG_LOG, TAG + " loadHtml() htmlCode: " + htmlCode + ", charset: " + charset);
-
-        mWebView.loadData(htmlCode, "text/html", charset);
-    }
-
-    /**
-     * 加载JS代码，子线程中不可用
-     *
-     * @param jsCode JS代码
-     */
-    public void loadJs(String jsCode) {
-        if (TextUtils.isEmpty(jsCode)) {
-            Logger.e(Constants.TAG_LOG, TAG + " loadJs() jsCode is Empty");
-            return;
-        }
-
-        Logger.d(Constants.TAG_LOG, TAG + " loadJs() jsCode: " + jsCode);
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            mWebView.evaluateJavascript("javascript: " + jsCode, null);
-        } else {
-            mWebView.loadUrl("javascript: " + jsCode);
-        }
-    }
-
-    /**
      * 获取用户代理
      *
      * @return 用户代理
@@ -258,7 +182,7 @@ public class WebViewHelper {
     /**
      * 获取WebView对象
      *
-     * @return an WebView Object
+     * @return a WebView Object
      */
     public WebView getWebView() {
         return mWebView;

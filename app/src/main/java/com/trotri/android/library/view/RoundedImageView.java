@@ -18,6 +18,7 @@ package com.trotri.android.library.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
@@ -28,6 +29,8 @@ import android.widget.ImageView;
 
 import com.trotri.android.java.sample.R;
 import com.trotri.android.thunder.util.DimensionConverter;
+
+import java.util.Arrays;
 
 /**
  * RoundedImageView class file
@@ -124,6 +127,40 @@ public class RoundedImageView extends ImageView {
         mPaint.setFilterBitmap(true);
         mPaint.setColor(Color.BLACK);
         mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+
+        if (changed) {
+            if (isCircular()) {
+                float radius = (float) (Math.min(getWidth(), getHeight())) / 2;
+                Arrays.fill(mCornerRadii, radius);
+            }
+
+            if (mShape == null) {
+                mShape = new RoundRectShape(mCornerRadii, null, null);
+            }
+
+            mShape.resize(getWidth(), getHeight());
+        }
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+
+        if (mShape == null) {
+            return;
+        }
+
+        int saveCount = canvas.getSaveCount();
+
+        canvas.save();
+        mShape.draw(canvas, mPaint);
+
+        canvas.restoreToCount(saveCount);
     }
 
     /**

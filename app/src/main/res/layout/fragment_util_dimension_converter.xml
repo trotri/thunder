@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.trotri.android.java.sample.view.vm.UtilDimensionConverterViewModel.Bean" />
+
+    </data>
+
+    <LinearLayout style="@style/LLayWrapper">
+
+        <LinearLayout style="@style/UtilDimensionConverterRowWrapper">
+
+            <TextView
+                style="@style/UtilDimensionConverterLeftCell"
+                android:text="@string/dimension_dp" />
+
+            <EditText
+                android:id="@+id/et_dp2px_dp"
+                style="@style/UtilDimensionConverterRightEtCell"
+                android:text="@={bean.mDp2pxDp}" />
+
+            <TextView
+                style="@style/UtilDimensionConverterCenterCell"
+                android:text="@string/arrow_right" />
+
+            <TextView
+                style="@style/UtilDimensionConverterLeftCell"
+                android:text="@string/dimension_px" />
+
+            <TextView
+                android:id="@+id/tv_dp2px_px"
+                style="@style/UtilDimensionConverterRightCell" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/UtilDimensionConverterRowWrapper">
+
+            <TextView
+                style="@style/UtilDimensionConverterLeftCell"
+                android:text="@string/dimension_px" />
+
+            <EditText
+                android:id="@+id/et_px2dp_px"
+                style="@style/UtilDimensionConverterRightEtCell"
+                android:text="@={bean.mPx2dpPx}" />
+
+            <TextView
+                style="@style/UtilDimensionConverterCenterCell"
+                android:text="@string/arrow_right" />
+
+            <TextView
+                style="@style/UtilDimensionConverterLeftCell"
+                android:text="@string/dimension_dp" />
+
+            <TextView
+                android:id="@+id/tv_px2dp_dp"
+                style="@style/UtilDimensionConverterRightCell" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/UtilDimensionConverterRowWrapper">
+
+            <TextView
+                style="@style/UtilDimensionConverterLeftCell"
+                android:text="@string/dimension_sp" />
+
+            <EditText
+                android:id="@+id/et_sp2px_sp"
+                style="@style/UtilDimensionConverterRightEtCell"
+                android:text="@={bean.mSp2pxSp}" />
+
+            <TextView
+                style="@style/UtilDimensionConverterCenterCell"
+                android:text="@string/arrow_right" />
+
+            <TextView
+                style="@style/UtilDimensionConverterLeftCell"
+                android:text="@string/dimension_px" />
+
+            <TextView
+                android:id="@+id/tv_sp2px_px"
+                style="@style/UtilDimensionConverterRightCell" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/UtilDimensionConverterRowWrapper">
+
+            <TextView
+                style="@style/UtilDimensionConverterLeftCell"
+                android:text="@string/dimension_px" />
+
+            <EditText
+                android:id="@+id/et_px2sp_px"
+                style="@style/UtilDimensionConverterRightEtCell"
+                android:text="@={bean.mPx2spPx}" />
+
+            <TextView
+                style="@style/UtilDimensionConverterCenterCell"
+                android:text="@string/arrow_right" />
+
+            <TextView
+                style="@style/UtilDimensionConverterLeftCell"
+                android:text="@string/dimension_sp" />
+
+            <TextView
+                android:id="@+id/tv_px2sp_sp"
+                style="@style/UtilDimensionConverterRightCell" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

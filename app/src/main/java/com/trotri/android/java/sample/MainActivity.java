@@ -8,11 +8,15 @@ import android.support.v4.app.Fragment;
 import com.trotri.android.java.sample.data.bean.ButtonPanelBean;
 import com.trotri.android.java.sample.view.BookDetailFragment;
 import com.trotri.android.java.sample.view.BookListFragment;
+import com.trotri.android.java.sample.view.BrowserFragment;
 import com.trotri.android.java.sample.view.ButtonPanelFragment;
 import com.trotri.android.java.sample.view.DbRegistryFragment;
 import com.trotri.android.java.sample.view.ErrorFragment;
+import com.trotri.android.java.sample.view.FileSandboxFragment;
+import com.trotri.android.java.sample.view.FileSdCardFragment;
 import com.trotri.android.java.sample.view.RoundedImageViewFragment;
 import com.trotri.android.java.sample.view.UtilContactsFragment;
+import com.trotri.android.java.sample.view.UtilDimensionConverterFragment;
 import com.trotri.android.java.sample.view.UtilRegistryFragment;
 import com.trotri.android.library.base.BaseActivity;
 
@@ -61,12 +65,20 @@ public class MainActivity extends BaseActivity {
                 return BookDetailFragment.newInstance(data);
             case ButtonPanelBean.ROUNDED_IMAGE_VIEW:
                 return RoundedImageViewFragment.newInstance();
-            case ButtonPanelBean.UTIL_CONTACTS:
-                return UtilContactsFragment.newInstance();
-            case ButtonPanelBean.UTIL_REGISTRY:
-                return UtilRegistryFragment.newInstance();
+            case ButtonPanelBean.BROWSER:
+                return BrowserFragment.newInstance();
+            case ButtonPanelBean.FILE_SANDBOX:
+                return FileSandboxFragment.newInstance();
+            case ButtonPanelBean.FILE_SD_CARD:
+                return FileSdCardFragment.newInstance();
             case ButtonPanelBean.DB_REGISTRY:
                 return DbRegistryFragment.newInstance();
+            case ButtonPanelBean.UTIL_REGISTRY:
+                return UtilRegistryFragment.newInstance();
+            case ButtonPanelBean.UTIL_CONTACTS:
+                return UtilContactsFragment.newInstance();
+            case ButtonPanelBean.UTIL_DIMENSION_CONVERTER:
+                return UtilDimensionConverterFragment.newInstance();
             default:
                 break;
         }

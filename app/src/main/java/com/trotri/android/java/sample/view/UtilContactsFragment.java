@@ -28,6 +28,8 @@ import com.trotri.android.thunder.inj.ViewModelInject;
 @ViewModelInject(UtilContactsViewModel.class)
 public class UtilContactsFragment extends BaseFragment<UtilContactsViewModel> {
 
+    public static final String TAG = "UtilContactsFragment";
+
     public static BaseFragment newInstance() {
         return new UtilContactsFragment();
     }

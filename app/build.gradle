@@ -19,6 +19,33 @@ android {
     dataBinding {
         enabled = true
     }
+    task clearJar(type: Delete) {
+        delete 'build/libs/Thunder.jar'
+        delete 'build/libs/Thunder_ProGuard.jar'
+    }
+    task makeJar(type: org.gradle.api.tasks.bundling.Jar) {
+        baseName 'Thunder'
+        from('build/intermediates/classes/release/com/trotri/android/thunder')
+        into('com/trotri/android/thunder/')
+        exclude('BuildConfig.class', 'R.class')
+        exclude {
+            it.name.startsWith('R$');
+        }
+    }
+    makeJar.dependsOn(clearJar, build)
+    task proguardJar(dependsOn: ['makeJar'], type: proguard.gradle.ProGuardTask) {
+        configuration 'proguard-rules.pro'
+        injars makeJar.archivePath.getAbsolutePath()
+        outjars 'build/libs/Thunder_ProGuard.jar'
+    }
+    lintOptions {
+        abortOnError false
+    }
+    /* Build -> Clean Project */
+    /* Build -> Make Project */
+    /* ./gradlew proguardJar */
+    /* build/libs/Thunder.jar */
+    /* build/libs/Thunder_ProGuard.jar */
 }
 
 dependencies {

@@ -5,7 +5,7 @@
 
         <variable
             name="item"
-            type="com.trotri.android.java.sample.data.bean.ContactsBean"/>
+            type="com.trotri.android.java.sample.data.bean.ContactsBean" />
 
     </data>
 
@@ -17,12 +17,12 @@
 
             <TextView
                 style="@style/UtilContactsLeftCell"
-                android:text="@string/contacts_id"/>
+                android:text="@string/contacts_id" />
 
             <TextView
                 android:id="@+id/tv_id"
                 style="@style/UtilContactsRightCell"
-                android:text="@{String.valueOf(item.getId())}"/>
+                android:text="@{String.valueOf(item.getId())}" />
 
         </LinearLayout>
 
@@ -30,12 +30,12 @@
 
             <TextView
                 style="@style/UtilContactsLeftCell"
-                android:text="@string/contacts_display_name"/>
+                android:text="@string/contacts_display_name" />
 
             <TextView
                 android:id="@+id/tv_display_name"
                 style="@style/UtilContactsRightCell"
-                android:text="@{String.valueOf(item.getDisplayName())}"/>
+                android:text="@{String.valueOf(item.getDisplayName())}" />
 
         </LinearLayout>
 
@@ -43,12 +43,12 @@
 
             <TextView
                 style="@style/UtilContactsLeftCell"
-                android:text="@string/contacts_phone_numbers"/>
+                android:text="@string/contacts_phone_numbers" />
 
             <TextView
                 android:id="@+id/tv_phone_numbers"
                 style="@style/UtilContactsRightCell"
-                android:text="@{String.valueOf(item.getPhoneNumbers())}"/>
+                android:text="@{String.valueOf(item.getPhoneNumbers())}" />
 
         </LinearLayout>
 
@@ -56,12 +56,12 @@
 
             <TextView
                 style="@style/UtilContactsLeftCell"
-                android:text="@string/contacts_emails"/>
+                android:text="@string/contacts_emails" />
 
             <TextView
                 android:id="@+id/tv_emails"
                 style="@style/UtilContactsRightCell"
-                android:text="@{String.valueOf(item.getEmails())}"/>
+                android:text="@{String.valueOf(item.getEmails())}" />
 
         </LinearLayout>
     </LinearLayout>

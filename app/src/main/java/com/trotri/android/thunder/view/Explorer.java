@@ -17,6 +17,8 @@
 package com.trotri.android.thunder.view;
 
 import android.content.Context;
+import android.os.Build;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.webkit.WebView;
 
@@ -58,10 +60,19 @@ public class Explorer extends WebView {
      * 需要手动调用此方法
      */
     public void onInitialize() {
-        mHelper = WebViewHelper.getInstance(this);
+        mHelper = new WebViewHelper(this);
 
         // 影响Js的alert函数
         setWebChromeClient(new WebChromeClient());
+    }
+
+    /**
+     * 销毁浏览器，子线程中不可用
+     * 需要手动调用此方法
+     */
+    public void onDestroy() {
+        removeAllViews();
+        destroy();
     }
 
     /**
@@ -71,7 +82,13 @@ public class Explorer extends WebView {
      */
     @Override
     public void loadUrl(String url) {
-        mHelper.loadUrl(url);
+        if (TextUtils.isEmpty(url)) {
+            Logger.e(Constants.TAG_LOG, TAG + " loadUrl() url is Empty");
+            return;
+        }
+
+        Logger.d(Constants.TAG_LOG, TAG + " loadUrl() url: " + url);
+        super.loadUrl(url);
     }
 
     /**
@@ -81,7 +98,18 @@ public class Explorer extends WebView {
      * @param charset  字符编码
      */
     public void loadHtml(String htmlCode, String charset) {
-        mHelper.loadHtml(htmlCode, charset);
+        if (TextUtils.isEmpty(htmlCode)) {
+            Logger.e(Constants.TAG_LOG, TAG + " loadHtml() htmlCode is Empty");
+            return;
+        }
+
+        charset = (charset == null) ? "" : charset.trim();
+        if (TextUtils.isEmpty(charset)) {
+            charset = WebViewHelper.DEFAULT_CHARSET;
+        }
+
+        Logger.d(Constants.TAG_LOG, TAG + " loadHtml() htmlCode: " + htmlCode + ", charset: " + charset);
+        super.loadData(htmlCode, "text/html", charset);
     }
 
     /**
@@ -90,7 +118,18 @@ public class Explorer extends WebView {
      * @param jsCode JS代码
      */
     public void loadJs(String jsCode) {
-        mHelper.loadJs(jsCode);
+        if (TextUtils.isEmpty(jsCode)) {
+            Logger.e(Constants.TAG_LOG, TAG + " loadJs() jsCode is Empty");
+            return;
+        }
+
+        Logger.d(Constants.TAG_LOG, TAG + " loadJs() jsCode: " + jsCode);
+        super.loadUrl("javascript: " + jsCode);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            super.evaluateJavascript("javascript: " + jsCode, null);
+        } else {
+            super.loadUrl("javascript: " + jsCode);
+        }
     }
 
     /**

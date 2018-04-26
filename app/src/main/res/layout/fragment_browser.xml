@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srlay_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.trotri.android.rice.js.Explorer
+                android:id="@+id/e_content"
+                style="@style/BrowserWebView" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <ProgressBar
+            android:id="@+id/pbar_loading"
+            style="@style/BrowserProgressBar" />
+
+        <TextView
+            android:id="@+id/tv_received_error"
+            style="@style/BrowserReceivedError" />
+    </FrameLayout>
+
+</layout>

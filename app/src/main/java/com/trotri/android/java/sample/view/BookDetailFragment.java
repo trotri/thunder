@@ -27,6 +27,8 @@ import io.reactivex.functions.Consumer;
 @ViewModelInject(BookDetailViewModel.class)
 public class BookDetailFragment extends BaseFragment<BookDetailViewModel> {
 
+    public static final String TAG = "BookDetailFragment";
+
     public static final String KEY_BOOK_ID = "book_id";
 
     private FragmentBookDetailBinding mDataBinding;

@@ -21,8 +21,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.webkit.JavascriptInterface;
 
-import com.trotri.android.thunder.view.WebViewHelper;
-
 /**
  * Explorer class file
  * 浏览器类
@@ -36,11 +34,6 @@ public class Explorer extends com.trotri.android.thunder.view.Explorer {
      * Js请求和回调辅助类
      */
     private Bridge mJsBridge;
-
-    /**
-     * 浏览器辅助类
-     */
-    private WebViewHelper mHelper;
 
     public Explorer(Context c) {
         super(c);
@@ -61,7 +54,7 @@ public class Explorer extends com.trotri.android.thunder.view.Explorer {
      * 初始化Js请求和回调辅助类
      */
     @SuppressLint("AddJavascriptInterface")
-    public void onInitJsBridge() {
+    private void onInitJsBridge() {
         mJsBridge = new Bridge(getContext(), this);
 
         addJavascriptInterface(new Object() {

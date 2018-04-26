@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout style="@style/LLayWrapper">
+
+        <LinearLayout style="@style/FileIoRowWrapper">
+
+            <TextView
+                style="@style/FileIoLeftCell"
+                android:text="@string/file_name" />
+
+            <TextView
+                android:id="@+id/tv_file_name"
+                style="@style/FileIoRightCell" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/FileIoRowWrapper">
+
+            <TextView
+                style="@style/FileIoLeftCell"
+                android:text="@string/content" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/FileIoRightCell" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/FileIoRowWrapper">
+
+            <Button
+                android:id="@+id/btn_write"
+                style="@style/BtnSubmitBar"
+                android:text="@string/write_data" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/FileIoRowWrapper">
+
+            <Button
+                android:id="@+id/btn_append_write"
+                style="@style/BtnSubmitBar"
+                android:text="@string/append_write_data" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

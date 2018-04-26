@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Thunder JsBridge Demo</title>
+    <script src="ThunderJsBridge.js"></script>
+    <script>
+    /**
+     * 弹出Json信息
+     */
+    function showJson(data) {
+        alert(JSON.stringify(data));
+    }
+
+    /**
+     * 弹出浏览器用户代理
+     */
+    function showUserAgent() {
+        alert(ThunderJsBridge.OS.getUserAgent());
+    }
+
+    /**
+     * 提示
+     */
+    function toast(text, isLong) {
+        tt.toast({
+            text: text,
+            isLong: isLong,
+            error: function(throwable) {
+                showJson(throwable);
+            }
+        });
+    }
+
+    /**
+     * 获取版本信息
+     */
+    function getVersion() {
+        tt.getVersion({
+            success: function(data) {
+                showJson(data);
+            },
+            error: function(throwable) {
+                showJson(throwable);
+            },
+            complete: function(result) {
+                alert(result);
+            },
+        });
+    }
+
+    </script>
+</head>
+<body style="font-size: 48px">
+<a href="javascript: showUserAgent();">Show UserAgent</a><br/><br/>
+<a href="javascript: toast('Text Wait Long', true);">Toast Long</a><br/><br/>
+<a href="javascript: toast('Text Wait Short', false);">Toast Short</a><br/><br/>
+<a href="javascript: getVersion();">Get Version</a><br/><br/>
+</body>
+</html>

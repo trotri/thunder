@@ -21,6 +21,8 @@ import com.trotri.android.thunder.inj.ViewModelInject;
 @ViewModelInject(ErrorViewModel.class)
 public class ErrorFragment extends BaseFragment<ErrorViewModel> {
 
+    public static final String TAG = "ErrorFragment";
+
     public static final String KEY_TIPS = "tips";
 
     public static ErrorFragment newInstance(String tips) {

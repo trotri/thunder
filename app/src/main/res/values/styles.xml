@@ -99,14 +99,38 @@
         <item name="android:contentDescription">@null</item>
     </style>
 
-    <!-- Util Contacts -->
-    <style name="UtilContactsRowWrapper" parent="LLayRowWrapper"></style>
+    <!-- Browser JS Bridge -->
+    <style name="BrowserWebView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scrollbarSize">0dp</item>
+        <item name="android:scrollbars">none</item>
+    </style>
 
-    <style name="UtilContactsLeftCell" parent="WeightRowLeftCell">
+    <style name="BrowserProgressBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/browser_progressbar_height</item>
+        <item name="android:progress">16</item>
+        <item name="android:progressDrawable">@drawable/browser_pbar_bg</item>
+    </style>
+
+    <style name="BrowserReceivedError">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:text">@string/browser_received_error</item>
+        <item name="android:textSize">@dimen/text_size_error_tips</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <!-- File Sandbox SdCard -->
+    <style name="FileIoRowWrapper" parent="LLayRowWrapper"></style>
+
+    <style name="FileIoLeftCell" parent="WeightRowLeftCell">
         <item name="android:layout_weight">1</item>
     </style>
 
-    <style name="UtilContactsRightCell" parent="WeightRowCell">
+    <style name="FileIoRightCell" parent="WeightRowCell">
         <item name="android:layout_weight">2</item>
     </style>
 
@@ -135,6 +159,37 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">@dimen/wrapper_horizontal_margin</item>
         <item name="android:checked">true</item>
+    </style>
+
+    <!-- Util Contacts -->
+    <style name="UtilContactsRowWrapper" parent="LLayRowWrapper"></style>
+
+    <style name="UtilContactsLeftCell" parent="WeightRowLeftCell">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="UtilContactsRightCell" parent="WeightRowCell">
+        <item name="android:layout_weight">2</item>
+    </style>
+
+    <!-- Util DimensionConverter -->
+    <style name="UtilDimensionConverterRowWrapper" parent="LLayRowWrapper"></style>
+
+    <style name="UtilDimensionConverterLeftCell" parent="WeightRowLeftCell">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="UtilDimensionConverterCenterCell" parent="WeightRowLeftCell">
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="UtilDimensionConverterRightCell" parent="WeightRowCell">
+        <item name="android:layout_weight">2</item>
+    </style>
+
+    <style name="UtilDimensionConverterRightEtCell" parent="UtilDimensionConverterRightCell">
+        <item name="android:inputType">number</item>
     </style>
 
 </resources>

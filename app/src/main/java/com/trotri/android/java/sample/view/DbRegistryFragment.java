@@ -23,6 +23,8 @@ import com.trotri.android.thunder.inj.ViewModelInject;
 @ViewModelInject(DbRegistryViewModel.class)
 public class DbRegistryFragment extends BaseFragment<DbRegistryViewModel> {
 
+    public static final String TAG = "DbRegistryFragment";
+
     private FragmentDbRegistryBinding mDataBinding;
 
     public static BaseFragment newInstance() {

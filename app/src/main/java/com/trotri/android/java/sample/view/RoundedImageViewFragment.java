@@ -26,6 +26,8 @@ import com.trotri.android.thunder.inj.ViewModelInject;
 @ViewModelInject(RoundedImageViewViewModel.class)
 public class RoundedImageViewFragment extends BaseFragment<RoundedImageViewViewModel> {
 
+    public static final String TAG = "RoundedImageViewFragment";
+
     private RoundedImageView.Builder mIvBuilder;
 
     private LinearLayout.LayoutParams mIvLayoutParams;

@@ -28,6 +28,8 @@ import com.trotri.android.thunder.inj.ViewModelInject;
 @ViewModelInject(ButtonPanelViewModel.class)
 public class ButtonPanelFragment extends BaseFragment<ButtonPanelViewModel> {
 
+    public static final String TAG = "ButtonPanelFragment";
+
     public static BaseFragment newInstance() {
         return new ButtonPanelFragment();
     }

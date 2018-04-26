@@ -162,7 +162,7 @@ public class SdCard {
     public void write(String fileName, String data, boolean append) throws NullPointerException, SecurityException, IOException {
         hasWriteExternalStorage(true);
 
-        File file = exists(fileName);
+        File file = new File(FileHelper.sdFileName(fileName));
         FileOutputStream out = new FileOutputStream(file, append);
         FileHelper.write(out, data);
     }

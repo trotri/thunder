@@ -35,9 +35,13 @@ public class ButtonPanelService {
 
             mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.BOOK_LIST, c.getString(R.string.book_list)));
             mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.ROUNDED_IMAGE_VIEW, c.getString(R.string.rounded_image_view)));
-            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.UTIL_CONTACTS, c.getString(R.string.util_contacts)));
-            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.UTIL_REGISTRY, c.getString(R.string.util_registry)));
+            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.BROWSER, c.getString(R.string.browser)));
+            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.FILE_SANDBOX, c.getString(R.string.file_sandbox)));
+            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.FILE_SD_CARD, c.getString(R.string.file_sd_card)));
             mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.DB_REGISTRY, c.getString(R.string.db_registry)));
+            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.UTIL_REGISTRY, c.getString(R.string.util_registry)));
+            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.UTIL_CONTACTS, c.getString(R.string.util_contacts)));
+            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.UTIL_DIMENSION_CONVERTER, c.getString(R.string.util_dimension_converter)));
         }
 
         return mItems;
