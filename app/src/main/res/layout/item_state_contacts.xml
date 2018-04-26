@@ -13,54 +13,54 @@
         style="@style/LLayWrapper"
         android:layout_height="wrap_content">
 
-        <LinearLayout style="@style/UtilContactsRowWrapper">
+        <LinearLayout style="@style/StateContactsRowWrapper">
 
             <TextView
-                style="@style/UtilContactsLeftCell"
+                style="@style/StateContactsLeftCell"
                 android:text="@string/contacts_id" />
 
             <TextView
                 android:id="@+id/tv_id"
-                style="@style/UtilContactsRightCell"
+                style="@style/StateContactsRightCell"
                 android:text="@{String.valueOf(item.getId())}" />
 
         </LinearLayout>
 
-        <LinearLayout style="@style/UtilContactsRowWrapper">
+        <LinearLayout style="@style/StateContactsRowWrapper">
 
             <TextView
-                style="@style/UtilContactsLeftCell"
+                style="@style/StateContactsLeftCell"
                 android:text="@string/contacts_display_name" />
 
             <TextView
                 android:id="@+id/tv_display_name"
-                style="@style/UtilContactsRightCell"
+                style="@style/StateContactsRightCell"
                 android:text="@{String.valueOf(item.getDisplayName())}" />
 
         </LinearLayout>
 
-        <LinearLayout style="@style/UtilContactsRowWrapper">
+        <LinearLayout style="@style/StateContactsRowWrapper">
 
             <TextView
-                style="@style/UtilContactsLeftCell"
+                style="@style/StateContactsLeftCell"
                 android:text="@string/contacts_phone_numbers" />
 
             <TextView
                 android:id="@+id/tv_phone_numbers"
-                style="@style/UtilContactsRightCell"
+                style="@style/StateContactsRightCell"
                 android:text="@{String.valueOf(item.getPhoneNumbers())}" />
 
         </LinearLayout>
 
-        <LinearLayout style="@style/UtilContactsRowWrapper">
+        <LinearLayout style="@style/StateContactsRowWrapper">
 
             <TextView
-                style="@style/UtilContactsLeftCell"
+                style="@style/StateContactsLeftCell"
                 android:text="@string/contacts_emails" />
 
             <TextView
                 android:id="@+id/tv_emails"
-                style="@style/UtilContactsRightCell"
+                style="@style/StateContactsRightCell"
                 android:text="@{String.valueOf(item.getEmails())}" />
 
         </LinearLayout>

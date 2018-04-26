@@ -12,7 +12,7 @@ import com.trotri.android.thunder.util.DimensionConverter;
  * 单位转换ViewModel
  *
  * @author 宋欢 <trotri@yeah.net>
- * @version $Id: UtilContactsViewModel.java 1 2017-05-01 10:00:06Z huan.song $
+ * @version $Id: StateContactsViewModel.java 1 2017-05-01 10:00:06Z huan.song $
  * @since 1.0
  */
 public class UtilDimensionConverterViewModel extends BaseViewModel {

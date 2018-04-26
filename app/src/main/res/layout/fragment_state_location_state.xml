@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="locationState"
+            type="com.trotri.android.thunder.state.LocationState" />
+
+        <variable
+            name="view"
+            type="com.trotri.android.java.sample.view.StateLocationStateFragment" />
+
+    </data>
+
+    <LinearLayout style="@style/LLayWrapper">
+
+        <LinearLayout style="@style/StateLocationStateRowWrapper">
+
+            <TextView
+                style="@style/StateLocationStateLeftCell"
+                android:text="@string/is_access_fine_location_granted" />
+
+            <TextView
+                android:id="@+id/tv_is_access_fine_location_granted"
+                style="@style/StateLocationStateRightCell"
+                android:text="@{locationState.hasAccessFineLocation() ? @string/boolean_true : @string/boolean_false}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateLocationStateRowWrapper">
+
+            <TextView
+                style="@style/StateLocationStateLeftCell"
+                android:text="@string/is_access_coarse_location_granted" />
+
+            <TextView
+                android:id="@+id/tv_is_access_coarse_location_granted"
+                style="@style/StateLocationStateRightCell"
+                android:text="@{locationState.hasAccessCoarseLocation() ? @string/boolean_true : @string/boolean_false}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateLocationStateRowWrapper">
+
+            <TextView
+                style="@style/StateLocationStateLeftCell"
+                android:text="@string/is_gps_enabled" />
+
+            <TextView
+                android:id="@+id/tv_is_gps_enabled"
+                style="@style/StateLocationStateRightCell"
+                android:text="@{locationState.hasAccessFineLocation() ? (locationState.isGpsEnabled() ? @string/boolean_true : @string/boolean_false) : @string/undefined}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateLocationStateRowWrapper">
+
+            <TextView
+                style="@style/StateLocationStateLeftCell"
+                android:text="@string/is_passive_enabled" />
+
+            <TextView
+                android:id="@+id/tv_is_passive_enabled"
+                style="@style/StateLocationStateRightCell"
+                android:text="@{locationState.hasAccessFineLocation() ? (locationState.isPassiveEnabled() ? @string/boolean_true : @string/boolean_false) : @string/undefined}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateLocationStateRowWrapper">
+
+            <TextView
+                style="@style/StateLocationStateLeftCell"
+                android:text="@string/is_network_enabled" />
+
+            <TextView
+                android:id="@+id/tv_is_network_enabled"
+                style="@style/StateLocationStateRightCell"
+                android:text="@{(locationState.hasAccessCoarseLocation() || locationState.hasAccessFineLocation()) ? (locationState.isNetworkEnabled() ? @string/boolean_true : @string/boolean_false) : @string/undefined}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateLocationStateRowWrapper">
+
+            <Button
+                android:id="@+id/btn_to_setting"
+                style="@style/BtnSubmitBar"
+                android:onClick="@{() -> view.toSetting()}"
+                android:text="@string/to_setting" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

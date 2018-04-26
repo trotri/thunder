@@ -36,6 +36,10 @@ import java.util.List;
 /**
  * LocationState class file
  * 位置信息类
+ * 需要权限：
+ * <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+ * 或
+ * <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: LocationState.java 1 2015-02-22 10:00:06Z huan.song $

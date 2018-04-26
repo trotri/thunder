@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="displayPixels"
+            type="com.trotri.android.thunder.state.DisplayPixels" />
+
+    </data>
+
+    <LinearLayout style="@style/LLayWrapper">
+
+        <LinearLayout style="@style/StateDisplayPixelsRowWrapper">
+
+            <TextView
+                style="@style/StateDisplayPixelsLeftCell"
+                android:text="@string/display_pixels_width" />
+
+            <TextView
+                android:id="@+id/tv_display_pixels_width"
+                style="@style/StateDisplayPixelsRightCell"
+                android:text="@{String.valueOf(displayPixels.getWidth())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateDisplayPixelsRowWrapper">
+
+            <TextView
+                style="@style/StateDisplayPixelsLeftCell"
+                android:text="@string/display_pixels_height" />
+
+            <TextView
+                android:id="@+id/tv_display_pixels_height"
+                style="@style/StateDisplayPixelsRightCell"
+                android:text="@{String.valueOf(displayPixels.getHeight())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateDisplayPixelsRowWrapper">
+
+            <TextView
+                style="@style/StateDisplayPixelsLeftCell"
+                android:text="@string/display_pixels_density" />
+
+            <TextView
+                android:id="@+id/tv_display_pixels_density"
+                style="@style/StateDisplayPixelsRightCell"
+                android:text="@{String.valueOf(displayPixels.getDensity())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateDisplayPixelsRowWrapper">
+
+            <TextView
+                style="@style/StateDisplayPixelsLeftCell"
+                android:text="@string/display_pixels_dpi" />
+
+            <TextView
+                android:id="@+id/tv_display_pixels_dpi"
+                style="@style/StateDisplayPixelsRightCell"
+                android:text="@{String.valueOf(displayPixels.getDPI())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateDisplayPixelsRowWrapper">
+
+            <TextView
+                style="@style/StateDisplayPixelsLeftCell"
+                android:text="@string/display_pixels_xdpi" />
+
+            <TextView
+                android:id="@+id/tv_display_pixels_xdpi"
+                style="@style/StateDisplayPixelsRightCell"
+                android:text="@{String.valueOf(displayPixels.getXDPI())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateDisplayPixelsRowWrapper">
+
+            <TextView
+                style="@style/StateDisplayPixelsLeftCell"
+                android:text="@string/display_pixels_ydpi" />
+
+            <TextView
+                android:id="@+id/tv_display_pixels_ydpi"
+                style="@style/StateDisplayPixelsRightCell"
+                android:text="@{String.valueOf(displayPixels.getYDPI())}" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

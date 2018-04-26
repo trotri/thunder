@@ -161,17 +161,6 @@
         <item name="android:checked">true</item>
     </style>
 
-    <!-- Util Contacts -->
-    <style name="UtilContactsRowWrapper" parent="LLayRowWrapper"></style>
-
-    <style name="UtilContactsLeftCell" parent="WeightRowLeftCell">
-        <item name="android:layout_weight">1</item>
-    </style>
-
-    <style name="UtilContactsRightCell" parent="WeightRowCell">
-        <item name="android:layout_weight">2</item>
-    </style>
-
     <!-- Util DimensionConverter -->
     <style name="UtilDimensionConverterRowWrapper" parent="LLayRowWrapper"></style>
 
@@ -190,6 +179,63 @@
 
     <style name="UtilDimensionConverterRightEtCell" parent="UtilDimensionConverterRightCell">
         <item name="android:inputType">number</item>
+    </style>
+
+    <!-- State Version -->
+    <style name="StateVersionRowWrapper" parent="LLayRowWrapper"></style>
+
+    <style name="StateVersionLeftCell" parent="WeightRowLeftCell">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="StateVersionRightCell" parent="WeightRowCell">
+        <item name="android:layout_weight">2</item>
+    </style>
+
+    <!-- State Contacts -->
+    <style name="StateContactsRowWrapper" parent="LLayRowWrapper"></style>
+
+    <style name="StateContactsLeftCell" parent="WeightRowLeftCell">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="StateContactsRightCell" parent="WeightRowCell">
+        <item name="android:layout_weight">2</item>
+    </style>
+
+    <!-- State Display Pixels -->
+    <style name="StateDisplayPixelsRowWrapper" parent="LLayRowWrapper"></style>
+
+    <style name="StateDisplayPixelsLeftCell" parent="WeightRowLeftCell">
+        <item name="android:layout_weight">3</item>
+    </style>
+
+    <style name="StateDisplayPixelsRightCell" parent="WeightRowCell">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- State LocationState -->
+    <style name="StateLocationStateRowWrapper" parent="LLayRowWrapper">
+    </style>
+
+    <style name="StateLocationStateLeftCell" parent="WeightRowLeftCell">
+        <item name="android:layout_weight">6</item>
+    </style>
+
+    <style name="StateLocationStateRightCell" parent="WeightRowCell">
+        <item name="android:layout_weight">2</item>
+    </style>
+
+    <!-- Ht Network Change Receiver -->
+    <style name="HtNetworkChangeReceiverRowWrapper" parent="LLayRowWrapper">
+    </style>
+
+    <style name="HtNetworkChangeReceiverLeftCell" parent="WeightRowLeftCell">
+        <item name="android:layout_weight">2</item>
+    </style>
+
+    <style name="HtNetworkChangeReceiverRightCell" parent="WeightRowCell">
+        <item name="android:layout_weight">1</item>
     </style>
 
 </resources>

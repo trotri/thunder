@@ -21,8 +21,12 @@ public final class ButtonPanelBean {
     public static final int FILE_SD_CARD = 401;
     public static final int DB_REGISTRY = 500;
     public static final int UTIL_REGISTRY = 501;
-    public static final int UTIL_CONTACTS = 502;
-    public static final int UTIL_DIMENSION_CONVERTER = 503;
+    public static final int UTIL_DIMENSION_CONVERTER = 502;
+    public static final int STATE_VERSION = 600;
+    public static final int STATE_CONTACTS = 601;
+    public static final int STATE_DISPLAY_PIXELS = 602;
+    public static final int STATE_LOCATION_STATE = 603;
+    public static final int HT_NETWORK_CHANGE_RECEIVER = 700;
 
     /**
      * Item final class

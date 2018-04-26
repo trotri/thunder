@@ -8,8 +8,12 @@
     <string name="file_sd_card">File Sd Card</string>
     <string name="db_registry">Db Registry</string>
     <string name="util_registry">Util Registry</string>
-    <string name="util_contacts">Util Contacts</string>
     <string name="util_dimension_converter">Util Dimension Converter</string>
+    <string name="state_version">State Version</string>
+    <string name="state_contacts">State Contacts</string>
+    <string name="state_display_pixels">State Display Pixels</string>
+    <string name="state_location_state">State Location State</string>
+    <string name="ht_network_change_receiver">HT Network Change Receiver</string>
 
     <string name="boolean_true">True</string>
     <string name="boolean_false">False</string>
@@ -26,6 +30,7 @@
 
     <string name="version_code">版本号：</string>
     <string name="version_name">版本名：</string>
+    <string name="package_name">包名：</string>
 
     <string name="display_pixels_width">屏幕X轴像素点个数：</string>
     <string name="display_pixels_height">屏幕Y轴像素点个数：</string>
@@ -39,8 +44,10 @@
     <string name="write_data">重新写入：</string>
     <string name="append_write_data">追加写入：</string>
 
-    <string name="network_available">Network Available：</string>
+    <string name="access_network_state">Access Network State：</string>
+    <string name="network_connected">Network Connected：</string>
     <string name="network_wifi">Network Wifi：</string>
+    <string name="network_mobile">Network Mobile：</string>
 
     <string name="is_access_fine_location_granted">ACCESS_FINE_LOCATION权限：</string>
     <string name="is_access_coarse_location_granted">ACCESS_COARSE_LOCATION权限：</string>

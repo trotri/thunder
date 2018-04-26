@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="version"
+            type="com.trotri.android.thunder.state.Version" />
+
+    </data>
+
+    <LinearLayout style="@style/LLayWrapper">
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/version_code" />
+
+            <TextView
+                android:id="@+id/tv_version_code"
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(version.getCode())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/version_name" />
+
+            <TextView
+                android:id="@+id/tv_version_name"
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(version.getName())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/package_name" />
+
+            <TextView
+                android:id="@+id/tv_package_name"
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(version.getPkgName())}" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

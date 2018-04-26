@@ -1,6 +1,6 @@
 package com.trotri.android.java.sample.data.bean;
 
-import com.trotri.android.thunder.util.Contacts;
+import com.trotri.android.thunder.state.Contacts;
 
 import java.util.List;
 

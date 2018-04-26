@@ -14,8 +14,12 @@ import com.trotri.android.java.sample.view.DbRegistryFragment;
 import com.trotri.android.java.sample.view.ErrorFragment;
 import com.trotri.android.java.sample.view.FileSandboxFragment;
 import com.trotri.android.java.sample.view.FileSdCardFragment;
+import com.trotri.android.java.sample.view.HtNetworkChangeReceiverFragment;
 import com.trotri.android.java.sample.view.RoundedImageViewFragment;
-import com.trotri.android.java.sample.view.UtilContactsFragment;
+import com.trotri.android.java.sample.view.StateContactsFragment;
+import com.trotri.android.java.sample.view.StateDisplayPixelsFragment;
+import com.trotri.android.java.sample.view.StateLocationStateFragment;
+import com.trotri.android.java.sample.view.StateVersionFragment;
 import com.trotri.android.java.sample.view.UtilDimensionConverterFragment;
 import com.trotri.android.java.sample.view.UtilRegistryFragment;
 import com.trotri.android.library.base.BaseActivity;
@@ -75,10 +79,18 @@ public class MainActivity extends BaseActivity {
                 return DbRegistryFragment.newInstance();
             case ButtonPanelBean.UTIL_REGISTRY:
                 return UtilRegistryFragment.newInstance();
-            case ButtonPanelBean.UTIL_CONTACTS:
-                return UtilContactsFragment.newInstance();
             case ButtonPanelBean.UTIL_DIMENSION_CONVERTER:
                 return UtilDimensionConverterFragment.newInstance();
+            case ButtonPanelBean.STATE_VERSION:
+                return StateVersionFragment.newInstance();
+            case ButtonPanelBean.STATE_CONTACTS:
+                return StateContactsFragment.newInstance();
+            case ButtonPanelBean.STATE_DISPLAY_PIXELS:
+                return StateDisplayPixelsFragment.newInstance();
+            case ButtonPanelBean.STATE_LOCATION_STATE:
+                return StateLocationStateFragment.newInstance();
+            case ButtonPanelBean.HT_NETWORK_CHANGE_RECEIVER:
+                return HtNetworkChangeReceiverFragment.newInstance();
             default:
                 break;
         }

@@ -40,8 +40,12 @@ public class ButtonPanelService {
             mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.FILE_SD_CARD, c.getString(R.string.file_sd_card)));
             mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.DB_REGISTRY, c.getString(R.string.db_registry)));
             mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.UTIL_REGISTRY, c.getString(R.string.util_registry)));
-            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.UTIL_CONTACTS, c.getString(R.string.util_contacts)));
             mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.UTIL_DIMENSION_CONVERTER, c.getString(R.string.util_dimension_converter)));
+            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.STATE_VERSION, c.getString(R.string.state_version)));
+            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.STATE_CONTACTS, c.getString(R.string.state_contacts)));
+            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.STATE_DISPLAY_PIXELS, c.getString(R.string.state_display_pixels)));
+            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.STATE_LOCATION_STATE, c.getString(R.string.state_location_state)));
+            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.HT_NETWORK_CHANGE_RECEIVER, c.getString(R.string.ht_network_change_receiver)));
         }
 
         return mItems;

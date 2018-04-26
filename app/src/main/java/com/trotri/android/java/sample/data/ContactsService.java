@@ -2,7 +2,7 @@ package com.trotri.android.java.sample.data;
 
 import com.trotri.android.java.sample.data.bean.ContactsBean;
 import com.trotri.android.library.util.SingletonManager;
-import com.trotri.android.thunder.util.Contacts;
+import com.trotri.android.thunder.state.Contacts;
 
 import java.util.ArrayList;
 import java.util.List;

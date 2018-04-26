@@ -26,6 +26,7 @@ import com.trotri.android.thunder.file.SdCard;
 import com.trotri.android.thunder.ht.CarrierType;
 import com.trotri.android.thunder.ht.ConnectType;
 import com.trotri.android.thunder.ht.HttpProxy;
+import com.trotri.android.thunder.state.Contacts;
 import com.trotri.android.thunder.state.DisplayPixels;
 import com.trotri.android.thunder.state.LocationState;
 import com.trotri.android.thunder.state.ManifestInfo;
@@ -34,7 +35,6 @@ import com.trotri.android.thunder.state.NetworkState;
 import com.trotri.android.thunder.state.PhoneState;
 import com.trotri.android.thunder.state.Version;
 import com.trotri.android.thunder.util.ClipboardHelper;
-import com.trotri.android.thunder.util.Contacts;
 import com.trotri.android.thunder.util.DexHelper;
 import com.trotri.android.thunder.util.DimensionConverter;
 

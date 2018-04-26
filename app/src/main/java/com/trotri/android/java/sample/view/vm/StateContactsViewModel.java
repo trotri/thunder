@@ -9,16 +9,16 @@ import com.trotri.android.thunder.ap.Logger;
 import java.util.List;
 
 /**
- * UtilContactsViewModel class file
+ * StateContactsViewModel class file
  * 联系人ViewModel
  *
  * @author 宋欢 <trotri@yeah.net>
- * @version $Id: UtilContactsViewModel.java 1 2017-05-01 10:00:06Z huan.song $
+ * @version $Id: StateContactsViewModel.java 1 2017-05-01 10:00:06Z huan.song $
  * @since 1.0
  */
-public class UtilContactsViewModel extends BaseViewModel {
+public class StateContactsViewModel extends BaseViewModel {
 
-    public static final String TAG = "UtilContactsViewModel";
+    public static final String TAG = "StateContactsViewModel";
 
     /**
      * 数据业务类

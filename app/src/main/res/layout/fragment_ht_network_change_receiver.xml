@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="hasAccessNetworkState"
+            type="boolean" />
+
+        <variable
+            name="isConnected"
+            type="boolean" />
+
+        <variable
+            name="isWifi"
+            type="boolean" />
+
+        <variable
+            name="isMobile"
+            type="boolean" />
+
+    </data>
+
+    <LinearLayout style="@style/LLayWrapper">
+
+        <LinearLayout style="@style/HtNetworkChangeReceiverRowWrapper">
+
+            <TextView
+                style="@style/HtNetworkChangeReceiverLeftCell"
+                android:text="@string/access_network_state" />
+
+            <TextView
+                android:id="@+id/tv_access_network_state"
+                style="@style/HtNetworkChangeReceiverRightCell"
+                android:text="@{hasAccessNetworkState ? @string/boolean_true : @string/boolean_false}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/HtNetworkChangeReceiverRowWrapper">
+
+            <TextView
+                style="@style/HtNetworkChangeReceiverLeftCell"
+                android:text="@string/network_connected" />
+
+            <TextView
+                android:id="@+id/tv_network_connected"
+                style="@style/HtNetworkChangeReceiverRightCell"
+                android:text="@{isConnected ? @string/boolean_true : @string/boolean_false}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/HtNetworkChangeReceiverRowWrapper">
+
+            <TextView
+                style="@style/HtNetworkChangeReceiverLeftCell"
+                android:text="@string/network_wifi" />
+
+            <TextView
+                android:id="@+id/tv_network_wifi"
+                style="@style/HtNetworkChangeReceiverRightCell"
+                android:text="@{isWifi ? @string/boolean_true : @string/boolean_false}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/HtNetworkChangeReceiverRowWrapper">
+
+            <TextView
+                style="@style/HtNetworkChangeReceiverLeftCell"
+                android:text="@string/network_mobile" />
+
+            <TextView
+                android:id="@+id/tv_network_mobile"
+                style="@style/HtNetworkChangeReceiverRightCell"
+                android:text="@{isMobile ? @string/boolean_true : @string/boolean_false}" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

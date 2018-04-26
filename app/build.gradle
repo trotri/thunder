@@ -19,6 +19,8 @@ android {
     dataBinding {
         enabled = true
     }
+
+    /* 打Jar包 */
     task clearJar(type: Delete) {
         delete 'build/libs/Thunder.jar'
         delete 'build/libs/Thunder_ProGuard.jar'
@@ -46,6 +48,16 @@ android {
     /* ./gradlew proguardJar */
     /* build/libs/Thunder.jar */
     /* build/libs/Thunder_ProGuard.jar */
+
+    /* Ndk编译 */
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    /* cd /Users/songhuan/WorkSpace/AndroidStudioProjects/Thunder/app/jni */
+    /* /Users/songhuan/Library/Android/sdk/ndk-bundle/ndk-build */
 }
 
 dependencies {

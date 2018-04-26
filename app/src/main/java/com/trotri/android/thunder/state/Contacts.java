@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.trotri.android.thunder.util;
+package com.trotri.android.thunder.state;
 
 import android.content.ContentResolver;
 import android.content.Context;
