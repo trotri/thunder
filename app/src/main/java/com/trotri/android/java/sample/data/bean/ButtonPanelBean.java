@@ -16,7 +16,8 @@ public final class ButtonPanelBean {
     public static final int BOOK_LIST = 100;
     public static final int BOOK_DETAIL = 101;
     public static final int ROUNDED_IMAGE_VIEW = 200;
-    public static final int BROWSER = 300;
+    public static final int BROWSER_INPUT = 300;
+    public static final int BROWSER = 301;
     public static final int FILE_SANDBOX = 400;
     public static final int FILE_SD_CARD = 401;
     public static final int DB_REGISTRY = 500;

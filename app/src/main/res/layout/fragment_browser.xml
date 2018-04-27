@@ -5,27 +5,38 @@
 
     </data>
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.v4.widget.SwipeRefreshLayout
-            android:id="@+id/srlay_container"
+        <include
+            android:id="@+id/title_bar"
+            layout="@layout/widget_title_bar" />
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_bar">
 
-            <com.trotri.android.rice.js.Explorer
-                android:id="@+id/e_content"
-                style="@style/BrowserWebView" />
-        </android.support.v4.widget.SwipeRefreshLayout>
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/srlay_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <ProgressBar
-            android:id="@+id/pbar_loading"
-            style="@style/BrowserProgressBar" />
+                <com.trotri.android.rice.js.Explorer
+                    android:id="@+id/e_content"
+                    style="@style/BrowserWebView" />
+            </android.support.v4.widget.SwipeRefreshLayout>
 
-        <TextView
-            android:id="@+id/tv_received_error"
-            style="@style/BrowserReceivedError" />
-    </FrameLayout>
+            <ProgressBar
+                android:id="@+id/pbar_loading"
+                style="@style/BrowserProgressBar" />
+
+            <TextView
+                android:id="@+id/tv_received_error"
+                style="@style/BrowserReceivedError" />
+        </FrameLayout>
+
+    </RelativeLayout>
 
 </layout>

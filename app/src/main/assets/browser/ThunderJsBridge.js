@@ -295,6 +295,67 @@ ThunderJsBridge.onBeforeAsyncListen = function(key, data) {
 };
 
 /**
+ * 标题栏
+ */
+TitleBar = {
+    /**
+     * 后退按钮
+     */
+    TYPE_BACKWARD: "backward",
+
+    /**
+     * 菜单按钮
+     */
+    TYPE_MENUS: "menus",
+
+    /**
+     * 按钮监听者，Java Script Object，必须包含一个onClick(type)方法
+     */
+    listeners: [],
+
+    /**
+     * 设置按钮监听者
+     * Java Script Object，必须包含一个onClick(type)方法
+     */
+    addListener: function(listener) {
+        if (listener == undefined || listener == null || typeof(listener) != "object") {
+            return false;
+        }
+
+        if (listener.onClick == undefined || listener.onClick == null) {
+            return false;
+        }
+
+        TitleBar.listeners.push(listener);
+        return true;
+    },
+
+    /**
+     * 按钮类型，backward：后退按钮、menus：菜单按钮
+     */
+    onClick: function(type) {
+        for (var i in TitleBar.listeners) {
+            TitleBar.listeners[i].onClick(type);
+        }
+    },
+
+    /**
+     * 获取是否是后退按钮
+     */
+    isBackward: function(type) {
+        return type == TitleBar.TYPE_BACKWARD;
+    },
+
+    /**
+     * 获取是否是菜单按钮
+     */
+    isMenus: function(type) {
+        return type == TitleBar.TYPE_MENUS;
+    }
+
+};
+
+/**
  * tt Object
  */
 var tt = {

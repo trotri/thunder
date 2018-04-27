@@ -9,6 +9,7 @@ import com.trotri.android.java.sample.data.bean.ButtonPanelBean;
 import com.trotri.android.java.sample.view.BookDetailFragment;
 import com.trotri.android.java.sample.view.BookListFragment;
 import com.trotri.android.java.sample.view.BrowserFragment;
+import com.trotri.android.java.sample.view.BrowserInputFragment;
 import com.trotri.android.java.sample.view.ButtonPanelFragment;
 import com.trotri.android.java.sample.view.DbRegistryFragment;
 import com.trotri.android.java.sample.view.ErrorFragment;
@@ -69,8 +70,10 @@ public class MainActivity extends BaseActivity {
                 return BookDetailFragment.newInstance(data);
             case ButtonPanelBean.ROUNDED_IMAGE_VIEW:
                 return RoundedImageViewFragment.newInstance();
+            case ButtonPanelBean.BROWSER_INPUT:
+                return BrowserInputFragment.newInstance();
             case ButtonPanelBean.BROWSER:
-                return BrowserFragment.newInstance();
+                return BrowserFragment.newInstance(data);
             case ButtonPanelBean.FILE_SANDBOX:
                 return FileSandboxFragment.newInstance();
             case ButtonPanelBean.FILE_SD_CARD:

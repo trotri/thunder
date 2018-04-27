@@ -83,6 +83,17 @@
                 android:text="@{String.valueOf(displayPixels.getYDPI())}" />
         </LinearLayout>
 
+        <LinearLayout style="@style/StateDisplayPixelsRowWrapper">
+
+            <TextView
+                style="@style/StateDisplayPixelsLeftCell"
+                android:text="@string/display_pixels_status_bar_height" />
+
+            <TextView
+                android:id="@+id/tv_display_pixels_status_bar_height"
+                style="@style/StateDisplayPixelsRightCell"
+                android:text="@{String.valueOf(displayPixels.getStatusBarHeight())}" />
+        </LinearLayout>
     </LinearLayout>
 
 </layout>

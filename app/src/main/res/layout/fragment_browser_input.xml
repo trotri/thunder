@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/Wrapper"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_url_hint"
+                android:inputType="textUri" />
+
+            <Button
+                android:id="@+id/btn_enter_url"
+                style="@style/BtnSubmitBar"
+                android:text="@string/enter_url" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/readme" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</layout>

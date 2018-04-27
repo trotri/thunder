@@ -20,6 +20,24 @@
     }
 
     /**
+     * 设置标题栏监听者
+     */
+    TitleBar.addListener({
+        /**
+         * 监听标题栏点击事件
+         */
+        onClick: function(type) {
+            if (TitleBar.isBackward(type)) {
+                alert("Backward Clicked");
+            }
+
+            if (TitleBar.isMenus(type)) {
+                alert("Menus Clicked");
+            }
+        }
+    });
+
+    /**
      * 提示
      */
     function toast(text, isLong) {

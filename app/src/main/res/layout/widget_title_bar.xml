@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/flay_title_bar"
+        style="@style/TitleBar">
+
+        <LinearLayout style="@style/TitleBarWrapper">
+
+            <FrameLayout style="@style/TitleBarBtnWrapper">
+
+                <Button
+                    android:id="@+id/btn_backward"
+                    style="@style/TitleBarButton"
+                    android:background="@mipmap/backward" />
+            </FrameLayout>
+
+            <FrameLayout style="@style/TitleBarTitleWrapper">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/TitleBarTitle" />
+            </FrameLayout>
+
+            <FrameLayout style="@style/TitleBarBtnWrapper">
+
+                <Button
+                    android:id="@+id/btn_menus"
+                    style="@style/TitleBarButton"
+                    android:background="@mipmap/menus" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</layout>

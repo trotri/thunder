@@ -6,7 +6,6 @@
     <dimen name="button_height">48dp</dimen>
     <dimen name="row_height">48dp</dimen>
     <dimen name="underline_height">1dp</dimen>
-    <dimen name="browser_progressbar_height">4dp</dimen>
     <dimen name="text_height">32dp</dimen>
     <dimen name="text_size">14sp</dimen>
     <dimen name="text_size_error_tips">16sp</dimen>
@@ -19,4 +18,10 @@
     <dimen name="rounded_image_view_cornerRadius_rightTop">32dp</dimen>
     <dimen name="rounded_image_view_cornerRadius_rightBottom">48dp</dimen>
     <dimen name="rounded_image_view_cornerRadius_leftBottom">64dp</dimen>
+
+    <dimen name="browser_progressbar_height">3dp</dimen>
+    <dimen name="titlebar_height">44dp</dimen>
+    <dimen name="titlebar_title_frame_height">42dp</dimen>
+    <dimen name="titlebar_title_height">17sp</dimen>
+    <dimen name="titlebar_button_height">20dp</dimen>
 </resources>

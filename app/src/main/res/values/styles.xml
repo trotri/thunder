@@ -123,6 +123,47 @@
         <item name="android:visibility">gone</item>
     </style>
 
+    <!-- Title Bar -->
+    <style name="TitleBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/titlebar_height</item>
+        <item name="android:background">@color/colorTitleBar</item>
+    </style>
+
+    <style name="TitleBarWrapper">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/titlebar_height</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="TitleBarBtnWrapper">
+        <item name="android:layout_width">@dimen/titlebar_height</item>
+        <item name="android:layout_height">@dimen/titlebar_height</item>
+        <item name="android:layout_weight">0</item>
+    </style>
+
+    <style name="TitleBarTitleWrapper">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/titlebar_height</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="TitleBarButton">
+        <item name="android:layout_width">@dimen/titlebar_button_height</item>
+        <item name="android:layout_height">@dimen/titlebar_button_height</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="TitleBarTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/titlebar_title_frame_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/colorTitleTxt</item>
+        <item name="android:textSize">@dimen/titlebar_title_height</item>
+    </style>
+
     <!-- File Sandbox SdCard -->
     <style name="FileIoRowWrapper" parent="LLayRowWrapper"></style>
 
@@ -215,8 +256,7 @@
     </style>
 
     <!-- State LocationState -->
-    <style name="StateLocationStateRowWrapper" parent="LLayRowWrapper">
-    </style>
+    <style name="StateLocationStateRowWrapper" parent="LLayRowWrapper"></style>
 
     <style name="StateLocationStateLeftCell" parent="WeightRowLeftCell">
         <item name="android:layout_weight">6</item>
@@ -227,8 +267,7 @@
     </style>
 
     <!-- Ht Network Change Receiver -->
-    <style name="HtNetworkChangeReceiverRowWrapper" parent="LLayRowWrapper">
-    </style>
+    <style name="HtNetworkChangeReceiverRowWrapper" parent="LLayRowWrapper"></style>
 
     <style name="HtNetworkChangeReceiverLeftCell" parent="WeightRowLeftCell">
         <item name="android:layout_weight">2</item>

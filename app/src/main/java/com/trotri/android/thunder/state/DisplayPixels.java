@@ -18,6 +18,7 @@ package com.trotri.android.thunder.state;
 
 import android.content.Context;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.util.DisplayMetrics;
 
 import com.trotri.android.thunder.ap.Constants;
@@ -132,6 +133,39 @@ public class DisplayPixels {
      */
     public float getYDPI() {
         return getDisplayMetrics().ydpi;
+    }
+
+    /**
+     * 获取状态栏高度
+     *
+     * @return 状态栏高度，单位：像素
+     */
+    public float getStatusBarHeight() {
+        int identifier = 0;
+        try {
+            identifier = getAppContext().getResources().getIdentifier("status_bar_height", "dimen", "android");
+        } catch (Exception e) {
+            Logger.e(Constants.TAG, TAG + " getStatusBarHeight()", e);
+        }
+
+        if (identifier <= 0) {
+            Logger.e(Constants.TAG, TAG + " getStatusBarHeight() identifier <= 0");
+            return 0;
+        }
+
+        float result = 0;
+        try {
+            result = getAppContext().getResources().getDimensionPixelSize(identifier);
+        } catch (Resources.NotFoundException e) {
+            Logger.e(Constants.TAG, TAG + " getStatusBarHeight()", e);
+        }
+
+        if (result <= 0) {
+            Logger.e(TAG, " getStatusBarHeight() result <= 0");
+            return 0;
+        }
+
+        return result;
     }
 
     /**

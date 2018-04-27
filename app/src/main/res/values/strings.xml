@@ -3,7 +3,7 @@
 
     <string name="book_list">Book List</string>
     <string name="rounded_image_view">Rounded ImageView</string>
-    <string name="browser">Browser</string>
+    <string name="browser_input">Browser</string>
     <string name="file_sandbox">File Sandbox</string>
     <string name="file_sd_card">File Sd Card</string>
     <string name="db_registry">Db Registry</string>
@@ -38,6 +38,7 @@
     <string name="display_pixels_dpi">屏幕每英寸物理像素点个数：</string>
     <string name="display_pixels_xdpi">屏幕X轴每英寸物理像素点个数：</string>
     <string name="display_pixels_ydpi">屏幕Y轴每英寸物理像素点个数：</string>
+    <string name="display_pixels_status_bar_height">状态栏高度：</string>
 
     <string name="file_name">文件名：</string>
     <string name="content">内容：</string>
@@ -72,6 +73,13 @@
     <string name="tips_fragment_not_exists">Fragment Not Exists</string>
 
     <string name="browser_received_error">点击屏幕，重新加载</string>
+    <string name="enter_url_hint">请输入网址（置空，打开示例网址）</string>
+    <string name="enter_url">打开网址</string>
+
+    <string name="readme">
+1、示例网址：本地.assets/browser/demo.html
+2、说明文档：GitHub-README.md
+    </string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
