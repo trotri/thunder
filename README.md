@@ -12,6 +12,18 @@ Android Framework
 > + 类型转换类 - 避免NumberFormatException，Obj2Int、Obj2Long、Obj2Float、Obj2Double、ByteArr2Hex、Str2ByteArr、ByteArr2Str、Int2Ip、ByteArr2Mac
 > + 主线程类 - 在主线程中执行代码，用于从子线程切换到主线程
 
+### 加解密包
+> + AES加解密类 - 转换方式：AES/CBC/PKCS5Padding
+> + MD5加密类
+> + URL安全的Base64加解密类 - 还原和去掉Base64密文中的+、/、=
+
+### DB包
+> + 数据库表的概要描述 - 包含表名、主键、表的自增字段、字段名、字段默认值等
+> + 数据库列的概要描述 - 包含列名、类型、长度、默认值、是否是主键、是否自增、是否允许为空等
+> + 数据库操作类 - 封装增删改查
+> + 全局数据寄存类 - 使用DB寄存全局数据，Key => Value
+
+
 
 > + 版本信息类 - 获取AndroidManifest.xml中android:versionCode、android:versionName
 > + 日志处理类 - 添加日志回调接口，输出日志时自定义其他操作，如：提交日志到服务器
