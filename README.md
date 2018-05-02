@@ -16,10 +16,14 @@ Thunder
 > + 类型转换类 - 避免NumberFormatException，Obj2Int、Obj2Long、Obj2Float、Obj2Double、ByteArr2Hex、Str2ByteArr、ByteArr2Str、Int2Ip、ByteArr2Mac
 > + 主线程类 - 在主线程中执行代码，用于从子线程切换到主线程
 
-### 加解密包
-> + AES加解密类 - 转换方式：AES/CBC/PKCS5Padding
-> + MD5加密类
-> + URL安全的Base64加解密类 - 还原和去掉Base64密文中的+、/、=
+### HTTP包
+> + HTTP类
+> + HTTP异步类 - 在后台线程中执行HTTP请求，执行完后，在主线程中回调Listener接口
+> + 下载类
+> + 下载异步类 - 在后台线程中执行下载，执行完后，在主线程中回调Listener接口
+> + 网络连接类 - 移动运营商类型，选择合适的代理
+> + 移动运营商类型
+> + 联网类型
 
 ### DB包
 > + 数据库表的概要描述 - 包含表名、主键、表的自增字段、字段名、字段默认值等
@@ -33,20 +37,7 @@ Thunder
 > + 沙盒文件读写类 - 应用沙盒目录中文件读写类，/data/data/<package name>/files
 > + 文件查找类 - 通过文件名和后缀名查找
 
-### HTTP包
-> + HTTP类
-> + HTTP异步类 - 在后台线程中执行HTTP请求，执行完后，在主线程中回调Listener接口
-> + 下载类
-> + 下载异步类 - 在后台线程中执行下载，执行完后，在主线程中回调Listener接口
-> + 网络连接类 - 移动运营商类型，选择合适的代理
-> + 移动运营商类型
-> + 联网类型
-
-### 依赖注入
-> + ViewModel注解
-> + 视图注解
-
-### 手机状态
+### 手机状态包
 > + 通讯录管理类
 > + 屏幕信息类 - 宽、高、密度等
 > + 位置信息类
@@ -64,13 +55,53 @@ Thunder
 > + 随机数辅助类
 > + 全局数据寄存类 - 使用SharedPreferences寄存
 
+### 加解密包
+> + AES加解密类 - 转换方式：AES/CBC/PKCS5Padding
+> + MD5加密类
+> + URL安全的Base64加解密类 - 还原和去掉Base64密文中的+、/、=
+
 ### 视图包
 > + 浏览器类
 > + 沉浸辅助类
 > + 上拉加载更多提示布局
 > + 浏览器辅助类
 
+### 依赖注入包
+> + ViewModel注解
+> + 视图注解
+
 Rice
 ------
 <br>
 
+### 基类包
+> + Activity基类
+> + Fragment基类
+> + 数据处理器基类
+
+### 数据包
+> + 常用错误码类
+> + 常用错误信息类
+
+### DB包
+> + DbRetrofit - 类似Retrofit，处理Db相关操作
+
+### 常用工具包
+> + RxJava方法管理类 - 用于Mvvm模式，方法绑定和通知
+> + RetrofitBuilder - Build a new Retrofit
+> + DbRetrofitBuilder - Build a new DbRetrofit
+> + Fragment辅助类
+> + Gson辅助类 - 适配m前缀的属性名
+> + 资源管理类 - 通过名字获取资源值
+> + 计划任务类 - 周期执行和延迟执行
+
+### 视图包
+> + RecyclerView Adapter 基类 - View包含一个Header和Footer
+> + 标准的 RecyclerView Adapter 基类 - 用于 DataBinding，View包含一个Header和Footer
+> + 标准的 RecyclerView Adapter 基类 - View包含一个Header和Footer
+> + RecyclerView ItemDecoration 类
+> + RecyclerView LinearLayout ItemDecoration 类
+> + RecyclerView Expandable ItemDecoration 类
+> + RecyclerView GridLayout StaggeredGrid ItemDecoration 类
+
+### Js包
