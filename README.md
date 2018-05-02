@@ -105,3 +105,93 @@ Rice
 > + RecyclerView GridLayout StaggeredGrid ItemDecoration 类
 
 ### Js包
+
+###### 监听标题栏按钮
+标题栏有2个按钮，“返回按钮”和“菜单按钮”，应该由Android代码处理2个按钮的点击事件（暂时没开发）。<br>
+目前只用Js的方式通知按钮被点击了，在Html页面Js没加载完毕的时候，点击2个按钮会没有响应。<br>
+<pre><code>
+/**
+ * 设置标题栏监听者
+ */
+TitleBar.addListener({
+    /**
+     * 监听标题栏点击事件
+     */
+    onClick: function(type) {
+        // 点击“返回按钮”
+        if (TitleBar.isBackward(type)) {
+            alert("Backward Clicked");
+        }
+
+        // 点击“菜单按钮”
+        if (TitleBar.isMenus(type)) {
+            alert("Menus Clicked");
+        }
+    }
+});
+</code></pre>
+<br>
+
+###### 调用Js方法说明
+调用Js方法格式<br>
+<pre><code>
+tt.方法名({
+    参数1: 值1,
+    参数2: 值2,
+    success: function(data) {}, // 调用成功时执行，data（Json）
+    error: function(throwable) {}, // 调用失败时执行，throwable（Json {errNo: 1, errMsg: ""}）中包括错误码和错误消息
+    complete: function(result) {}, // 无论成功或失败，都回调该方法，result: true or false
+});
+</code></pre>
+<br>
+
+Demo中调用了2个Js方法：<br>
+Demo：https://github.com/trotri/tbs_explorer/blob/master/app/src/main/assets/demo.html<br>
+1、提示框，对应Java的ToastHandler类<br>
+<pre><code>
+tt.toast({
+    text: text, // 参数：提示内容
+    isLong: isLong, // 参数：展示时长，true: 长时间展示（约3.5s）、false：短时间展示（约1.5s）
+    error: function(throwable) { // 调用失败时执行，throwable（Json {errNo: 1, errMsg: ""}）中包括错误码和错误消息
+        showJson(throwable);
+    }
+});
+</code></pre>
+<br>
+
+2、获取版本信息，对应Java的ToastHandler类<br>
+<pre><code>
+tt.getVersion({
+    success: function(data) { // 调用成功时执行，data(Json)中包括版本号和版本名
+        showJson(data);
+    },
+    error: function(throwable) { // 调用失败时执行，throwable(Json{errNo: 1, errMsg: ""})中包括错误码和错误消息
+        showJson(throwable);
+    },
+    complete: function(result) { // 无论成功或失败，都回调该方法，result: true or false
+        alert(result);
+    },
+});
+</code></pre>
+<br>
+
+###### error: function(throwable)，throwable(Json{errNo: 1, errMsg: ""})中系统的错误码和错误消息说明
+1、安卓系统没有window.Thunder对象时，抛出错误 = { errNo: -1, errMsg: "window.Thunder undefined" }<br>
+2、系统类型未知时，抛出错误 = { errNo: -2, errMsg: "operating system type undefined" }<br>
+3、Android没提供该方法，抛出错误 = { errNo: -3, errMsg: "Js method not found exception" }<br>
+4、参数不是有效的Json格式，抛出错误 = { errNo: -4, errMsg: "Js parameter json syntax exception" }<br>
+<br>
+
+###### Js方法库，由Android开发者维护
+网址：https://github.com/trotri/tbs_explorer/blob/master/app/src/main/assets/TrotriJSBridge.js<br>
+将TrotriJSBridge.js拷贝到自己的服务器，自己的网页中需要引用该Js，<script src="http://yoursite.com/***/TrotriJSBridge.js"></script><br>
+如果想知道Android提供了哪些Js方法，除了参考Demo，还可以参考TrotriJSBridge.js中的tt类
+<pre><code>
+<br>
+
+### Js方法，Android代码说明（H5开发者可以忽略该说明）
+每个Js方法对应一个Java类，全部在该目录下。<br>
+目录：https://github.com/trotri/tbs_explorer/tree/master/app/src/main/java/com/trotri/android/js/handlers<br>
+ToastHandler类：提示框，参数：提示内容、展示时长<br>
+VersionHandler类：获取版本信息，参数：无<br>
+<br>
