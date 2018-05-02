@@ -186,7 +186,6 @@ tt.getVersion({
 网址：https://github.com/trotri/thunder/blob/master/app/src/main/assets/browser/ThunderJsBridge.js<br>
 将TrotriJSBridge.js拷贝到自己的服务器，自己的网页中需要引用该Js，<script src="http://yoursite.com/***/TrotriJSBridge.js"></script><br>
 如果想知道Android提供了哪些Js方法，除了参考Demo，还可以参考TrotriJSBridge.js中的tt类
-<pre><code>
 <br>
 
 ### Js方法，Android代码说明（H5开发者可以忽略该说明）
