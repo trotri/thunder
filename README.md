@@ -22,7 +22,38 @@ Android Framework
 > + 数据库列的概要描述 - 包含列名、类型、长度、默认值、是否是主键、是否自增、是否允许为空等
 > + 数据库操作类 - 封装增删改查
 > + 全局数据寄存类 - 使用DB寄存全局数据，Key => Value
+> + 异步全局数据寄存类 - 在后台线程中执行存储，执行完后，在主线程中回调Listener接口
 
+### 文件包
+> + SdCard文件读写类 - Secure Digital Memory Card 读写类
+> + 沙盒文件读写类 - 应用沙盒目录中文件读写类，/data/data/<package name>/files
+> + 文件查找类 - 通过文件名和后缀名查找
+
+### HTTP包
+> + HTTP类
+> + HTTP异步类 - 在后台线程中执行HTTP请求，执行完后，在主线程中回调Listener接口
+> + 下载类
+> + 下载异步类 - 在后台线程中执行下载，执行完后，在主线程中回调Listener接口
+> + 网络连接类 - 移动运营商类型，选择合适的代理
+> + 移动运营商类型
+> + 联网类型
+
+### 依赖注入
+> + ViewModel注解
+> + 视图注解
+
+### 手机状态
+> + 通讯录管理类
+> + 屏幕信息类 - 宽、高、密度等
+> + 位置信息类
+> + Manifest信息类 - 获取AndroidManifest.xml中信息
+> + MetaData数据类 - 获取AndroidManifest.xml中<meta-data android:name="" android:value="" />
+> + 网络信息类 - Wifi名称、Mac地址、Ip地址
+> + 手机信息类 - 设备识别码、设备Id、网络运营商类型、网络运营商类型名称、Android Id、系统语言
+> + 版本信息类 - 获取AndroidManifest.xml中manifest:package、android:versionCode、android:versionName
+
+
+// --- --- //
 
 
 > + 版本信息类 - 获取AndroidManifest.xml中android:versionCode、android:versionName
