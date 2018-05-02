@@ -146,7 +146,7 @@ tt.方法名({
 <br>
 
 Demo中调用了2个Js方法：<br>
-Demo：https://github.com/trotri/tbs_explorer/blob/master/app/src/main/assets/demo.html<br>
+Demo：https://github.com/trotri/thunder/blob/master/app/src/main/assets/browser/demo.html<br>
 1、提示框，对应Java的ToastHandler类<br>
 <pre><code>
 tt.toast({
@@ -183,7 +183,7 @@ tt.getVersion({
 <br>
 
 ###### Js方法库，由Android开发者维护
-网址：https://github.com/trotri/tbs_explorer/blob/master/app/src/main/assets/TrotriJSBridge.js<br>
+网址：https://github.com/trotri/thunder/blob/master/app/src/main/assets/browser/ThunderJsBridge.js<br>
 将TrotriJSBridge.js拷贝到自己的服务器，自己的网页中需要引用该Js，<script src="http://yoursite.com/***/TrotriJSBridge.js"></script><br>
 如果想知道Android提供了哪些Js方法，除了参考Demo，还可以参考TrotriJSBridge.js中的tt类
 <pre><code>
@@ -191,7 +191,7 @@ tt.getVersion({
 
 ### Js方法，Android代码说明（H5开发者可以忽略该说明）
 每个Js方法对应一个Java类，全部在该目录下。<br>
-目录：https://github.com/trotri/tbs_explorer/tree/master/app/src/main/java/com/trotri/android/js/handlers<br>
+目录：https://github.com/trotri/thunder/tree/master/app/src/main/java/com/trotri/android/rice/js/handlers<br>
 ToastHandler类：提示框，参数：提示内容、展示时长<br>
 VersionHandler类：获取版本信息，参数：无<br>
 <br>
