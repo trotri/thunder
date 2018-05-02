@@ -21,6 +21,7 @@ import android.util.Log;
 /**
  * Logger final class file
  * 日志处理类
+ * 输出日志时自定义日志回调接口，如：提交日志到服务器
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: Logger.java 1 2015-02-22 10:00:06Z huan.song $

@@ -22,6 +22,7 @@ import com.trotri.android.thunder.state.Version;
 
 /**
  * VersionHandler class file
+ * 版本信息
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: VersionHandler.java 1 2016-01-08 10:00:06Z huan.song $

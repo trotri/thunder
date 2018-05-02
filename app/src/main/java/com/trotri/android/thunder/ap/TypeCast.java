@@ -23,7 +23,8 @@ import java.math.BigInteger;
 
 /**
  * TypeCast class file
- * 类型转换类
+ * 类型转换类，避免NumberFormatException
+ * Obj2Int、Obj2Long、Obj2Float、Obj2Double、ByteArr2Hex、Str2ByteArr、ByteArr2Str、Int2Ip、ByteArr2Mac
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: TypeCast.java 1 2015-02-22 10:00:06Z huan.song $

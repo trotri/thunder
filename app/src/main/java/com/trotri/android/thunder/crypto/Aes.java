@@ -34,7 +34,8 @@ import javax.crypto.spec.SecretKeySpec;
 
 /**
  * Aes class file
- * AES CBC 加解密类
+ * AES加解密类
+ * 转换方式：AES/CBC/PKCS5Padding
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: Aes.java 1 2015-02-22 10:00:06Z huan.song $

@@ -24,6 +24,7 @@ import android.os.Build;
 /**
  * CheckPermission class file
  * 权限检查类
+ * 访问手机状态、网络、访问网络状态、访问Wifi状态、定位、读取通讯录、Sd卡、接受手机启动广播
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: CheckPermission.java 1 2015-02-22 10:00:06Z huan.song $

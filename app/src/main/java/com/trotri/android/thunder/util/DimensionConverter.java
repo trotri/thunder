@@ -22,7 +22,7 @@ import android.util.TypedValue;
 
 /**
  * DimensionConverter class file
- * 单位转换类
+ * 单位转换类，Dp to Px、Px to Dp、Sp to Px、Px to Sp
  * 精确获取需要在主Activity的onWindowFocusChanged(boolean hasFocus)中调用
  *
  * @author 宋欢 <trotri@yeah.net>

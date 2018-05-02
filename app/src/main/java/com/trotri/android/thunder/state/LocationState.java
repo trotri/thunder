@@ -96,7 +96,7 @@ public class LocationState {
     /**
      * 打开位置信息设置页面
      *
-     * @param context a Activity Object
+     * @param context an Activity Object
      */
     public static void toSetting(Activity context) {
         Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);

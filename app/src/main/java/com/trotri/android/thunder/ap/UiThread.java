@@ -22,6 +22,7 @@ import android.os.Looper;
 /**
  * UiThread class file
  * 主线程类
+ * 在主线程中执行代码，用于从子线程切换到主线程
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: UiThread.java 1 2015-02-22 10:00:06Z huan.song $

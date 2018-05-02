@@ -41,7 +41,7 @@ import java.util.Enumeration;
 
 /**
  * NetworkState class file
- * 网络信息类
+ * 网络信息类，Wifi名称、Mac地址、Ip地址
  * 需要权限：<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
  *
  * @author 宋欢 <trotri@yeah.net>
@@ -103,11 +103,11 @@ public class NetworkState {
     }
 
     /**
-     * 获取WIFI名称
+     * 获取Wifi名称
      * 需要权限：
      * <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
      *
-     * @return WIFI名称，或者""
+     * @return Wifi名称，或者""
      */
     @SuppressLint("MissingPermission")
     public String getWifiName() {
@@ -136,13 +136,13 @@ public class NetworkState {
     }
 
     /**
-     * 获取MAC地址
+     * 获取Mac地址
      * 需要权限：
      * <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
      * 或
      * <uses-permission android:name="android.permission.INTERNET" />
      *
-     * @return MAC地址，或者""
+     * @return Mac地址，或者""
      */
     public String getMac() {
         String address = getWifiMac();
@@ -154,11 +154,11 @@ public class NetworkState {
     }
 
     /**
-     * 获取Wifi-MAC地址
+     * 获取Wifi-Mac地址
      * 需要权限：
      * <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
      *
-     * @return MAC地址，或者""
+     * @return Mac地址，或者""
      */
     @SuppressLint("MissingPermission")
     public String getWifiMac() {
@@ -187,25 +187,25 @@ public class NetworkState {
     }
 
     /**
-     * 通过IP，获取MAC地址
+     * 通过Ip，获取Mac地址
      * 需要权限：
      * <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
      * 或
      * <uses-permission android:name="android.permission.INTERNET" />
      *
-     * @return MAC地址，或者""
+     * @return Mac地址，或者""
      */
     public String getHostMac() {
         return getHostMac(getIp());
     }
 
     /**
-     * 通过IP，获取MAC地址
+     * 通过Ip，获取Mac地址
      * 需要权限：
      * <uses-permission android:name="android.permission.INTERNET" />
      *
-     * @param ip IP地址
-     * @return MAC地址，或者""
+     * @param ip Ip地址
+     * @return Mac地址，或者""
      */
     public String getHostMac(String ip) {
         if (TextUtils.isEmpty(ip)) {
@@ -240,13 +240,13 @@ public class NetworkState {
     }
 
     /**
-     * 获取IP地址
+     * 获取Ip地址
      * 需要权限：
      * <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
      * 或
      * <uses-permission android:name="android.permission.INTERNET" />
      *
-     * @return IP地址，或者""
+     * @return Ip地址，或者""
      */
     public String getIp() {
         NetworkInfo nInfo = getNetwork().getInfo();
@@ -267,11 +267,11 @@ public class NetworkState {
     }
 
     /**
-     * 获取Wifi-IP地址
+     * 获取Wifi-Ip地址
      * 需要权限：
      * <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
      *
-     * @return IP地址，或者""
+     * @return Ip地址，或者""
      */
     @SuppressLint("MissingPermission")
     public String getWifiIp() {
@@ -300,11 +300,11 @@ public class NetworkState {
     }
 
     /**
-     * 获取网关IP地址
+     * 获取网关Ip地址
      * 需要权限：
      * <uses-permission android:name="android.permission.INTERNET" />
      *
-     * @return IP地址，或者""
+     * @return Ip地址，或者""
      */
     public String getHostIp() {
         Enumeration<NetworkInterface> networkInterfaces = null;

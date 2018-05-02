@@ -24,7 +24,7 @@ import java.lang.reflect.Field;
 
 /**
  * GsonHelper class file
- * Gson辅助类
+ * Gson辅助类，适配m前缀的属性名
  * 需要包：
  * compile 'com.google.code.gson:gson:2.8.0'
  *

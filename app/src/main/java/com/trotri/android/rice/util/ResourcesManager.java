@@ -29,7 +29,7 @@ import com.trotri.android.thunder.ap.Logger;
 
 /**
  * ResourcesManager class file
- * 资源管理类
+ * 资源管理类，通过名字获取资源值
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: ResourcesManager.java 1 2016-01-08 10:00:06Z huan.song $

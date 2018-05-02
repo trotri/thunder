@@ -27,6 +27,7 @@ import android.telephony.TelephonyManager;
 /**
  * SystemService class file
  * 系统服务管理类，通过名字获取系统服务
+ * 手机信息服务类、网络状态服务类、Wifi状态服务类、定位系统服务类和剪贴板服务类
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: SystemService.java 1 2015-02-22 10:00:06Z huan.song $

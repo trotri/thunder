@@ -24,6 +24,7 @@ import android.net.NetworkInfo;
 /**
  * Network class file
  * 网络辅助类
+ * 是否联网、联网类型、子网络类型、网络信息类和扩展信息
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: Network.java 1 2015-02-22 10:00:06Z huan.song $
@@ -222,7 +223,7 @@ public class Network {
      * 需要权限：
      * <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
      *
-     * @return a Available NetworkInfo Object, or null
+     * @return an Available NetworkInfo Object, or null
      */
     public NetworkInfo getAvailableInfo() {
         NetworkInfo nInfo = getInfo();

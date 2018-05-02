@@ -27,7 +27,7 @@ import java.net.URLConnection;
 
 /**
  * HttpProxy class file
- * 网络连接类
+ * 网络连接类，移动运营商类型，选择合适的代理
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: HttpProxy.java 1 2015-02-22 10:00:06Z huan.song $

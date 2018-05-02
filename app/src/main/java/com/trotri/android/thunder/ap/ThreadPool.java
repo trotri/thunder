@@ -28,6 +28,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * ThreadPool class file
  * 标准线程池类
+ * 通过线程池创建子线程，并指定子线程崩溃处理类
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: ThreadPool.java 1 2015-02-22 10:00:06Z huan.song $

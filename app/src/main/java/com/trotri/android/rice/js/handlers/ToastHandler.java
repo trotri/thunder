@@ -23,6 +23,7 @@ import com.trotri.android.rice.js.HandlerFactory;
 
 /**
  * ToastHandler class file
+ * 提示框
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: ToastHandler.java 1 2016-01-08 10:00:06Z huan.song $

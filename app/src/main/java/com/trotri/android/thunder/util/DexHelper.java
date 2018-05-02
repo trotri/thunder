@@ -27,8 +27,11 @@ import dalvik.system.DexClassLoader;
 
 /**
  * DexHelper class file
- * DexClassLoader辅助类
+ * DexClassLoader辅助类，Dex方式热更新Jar代码
  * Optimized Directory Name，thunder_dex_optimized_毫秒时间戳+4位随机数、模式：PRIVATE
+ * <p>
+ * Jar转Dex：.../Library/Android/sdk/build-tools/25.0.2/dx --dex --output=.../*_dex.jar .../*.jar
+ * </p>
  * <pre>
  * String optimizedName = "test";
  * String fileName = "/data/data/<package name>/files/thunder_extends.jar";

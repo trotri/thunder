@@ -29,7 +29,7 @@ import com.trotri.android.thunder.ap.Logger;
 
 /**
  * ImageHelper class file
- * 图片辅助类
+ * 图片辅助类，Bitmap to Drawable、图片信息、缩放比例
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: ImageHelper.java 1 2015-02-22 10:00:06Z huan.song $

@@ -31,7 +31,7 @@ import java.util.Locale;
 
 /**
  * PhoneState class file
- * 手机信息类
+ * 手机信息类，设备识别码、设备Id、网络运营商类型、网络运营商类型名称、Android Id、系统语言
  * 需要权限：
  * <uses-permission android:name="android.permission.READ_PHONE_STATE" />
  *
@@ -123,11 +123,11 @@ public class PhoneState {
     }
 
     /**
-     * 获取设备ID
+     * 获取设备Id
      * 需要权限：
      * <uses-permission android:name="android.permission.READ_PHONE_STATE" />
      *
-     * @return 设备ID，或者""
+     * @return 设备Id，或者""
      */
     @SuppressLint("MissingPermission")
     public String getSubscriberId() {
@@ -190,7 +190,7 @@ public class PhoneState {
     }
 
     /**
-     * 获取当前手机系统语言。
+     * 获取当前手机系统语言
      *
      * @return 返回当前系统语言。例如：当前设置的是“中文-中国”，则返回“zh-CN”
      */

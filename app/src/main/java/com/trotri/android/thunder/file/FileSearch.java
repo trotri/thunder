@@ -25,7 +25,7 @@ import java.util.List;
 
 /**
  * FileSearch class file
- * 文件查找类
+ * 文件查找类，通过文件名和后缀名查找
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: FileSearch.java 1 2015-02-22 10:00:06Z huan.song $

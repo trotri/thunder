@@ -27,10 +27,12 @@
          * 监听标题栏点击事件
          */
         onClick: function(type) {
+            // 点击“返回按钮”
             if (TitleBar.isBackward(type)) {
                 alert("Backward Clicked");
             }
 
+            // 点击“菜单按钮”
             if (TitleBar.isMenus(type)) {
                 alert("Menus Clicked");
             }

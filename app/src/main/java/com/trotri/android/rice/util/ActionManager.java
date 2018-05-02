@@ -30,7 +30,7 @@ import io.reactivex.functions.Consumer;
 
 /**
  * ActionManager class file
- * MVVM模式：RxJava方法管理类
+ * RxJava方法管理类，用于Mvvm模式，方法绑定和通知
  * 需要包：
  * compile 'io.reactivex.rxjava2:rxjava:2.1.7'
  * compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
