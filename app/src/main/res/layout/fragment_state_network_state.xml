@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="networkState"
+            type="com.trotri.android.thunder.state.NetworkState" />
+
+    </data>
+
+    <LinearLayout style="@style/LLayWrapper">
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/wifi_name" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(networkState.getWifiName())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/mac" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(networkState.getMac())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/wifi_mac" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(networkState.getWifiMac())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/host_mac" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(networkState.getHostMac())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/ip" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(networkState.getIp())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/wifi_ip" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(networkState.getWifiIp())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/host_ip" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(networkState.getHostIp())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/connect_type" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(networkState.getConnectType())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/connect_type" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@string/connect_type_desc" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/carrier_type" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(networkState.getCarrierType())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/carrier_type" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@string/carrier_type_desc" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

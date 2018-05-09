@@ -45,7 +45,10 @@ public class ButtonPanelService {
             mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.STATE_CONTACTS, c.getString(R.string.state_contacts)));
             mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.STATE_DISPLAY_PIXELS, c.getString(R.string.state_display_pixels)));
             mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.STATE_LOCATION_STATE, c.getString(R.string.state_location_state)));
+            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.STATE_PHONE_STATE, c.getString(R.string.state_phone_state)));
+            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.STATE_NETWORK_STATE, c.getString(R.string.state_network_state)));
             mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.HT_NETWORK_CHANGE_RECEIVER, c.getString(R.string.ht_network_change_receiver)));
+            mItems.add(new ButtonPanelBean.Item(ButtonPanelBean.TEST, c.getString(R.string.test)));
         }
 
         return mItems;

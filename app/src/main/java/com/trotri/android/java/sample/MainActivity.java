@@ -20,7 +20,10 @@ import com.trotri.android.java.sample.view.RoundedImageViewFragment;
 import com.trotri.android.java.sample.view.StateContactsFragment;
 import com.trotri.android.java.sample.view.StateDisplayPixelsFragment;
 import com.trotri.android.java.sample.view.StateLocationStateFragment;
+import com.trotri.android.java.sample.view.StateNetworkStateFragment;
+import com.trotri.android.java.sample.view.StatePhoneStateFragment;
 import com.trotri.android.java.sample.view.StateVersionFragment;
+import com.trotri.android.java.sample.view.TestFragment;
 import com.trotri.android.java.sample.view.UtilDimensionConverterFragment;
 import com.trotri.android.java.sample.view.UtilRegistryFragment;
 import com.trotri.android.library.base.BaseActivity;
@@ -94,6 +97,12 @@ public class MainActivity extends BaseActivity {
                 return StateLocationStateFragment.newInstance();
             case ButtonPanelBean.HT_NETWORK_CHANGE_RECEIVER:
                 return HtNetworkChangeReceiverFragment.newInstance();
+            case ButtonPanelBean.STATE_PHONE_STATE:
+                return StatePhoneStateFragment.newInstance();
+            case ButtonPanelBean.STATE_NETWORK_STATE:
+                return StateNetworkStateFragment.newInstance();
+            case ButtonPanelBean.TEST:
+                return TestFragment.newInstance();
             default:
                 break;
         }

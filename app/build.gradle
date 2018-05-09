@@ -10,12 +10,29 @@ android {
         versionName "1.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        release {
+            keyAlias 'test'
+            keyPassword 'abcdef'
+            storeFile file('/Users/songhuan/WorkSpace/AndroidStudioProjects/Thunder/app/src/main/assets/keystore/test.keystore')
+            storePassword '123456'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
+
+    /* android.util.Log not mocked */
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
     dataBinding {
         enabled = true
     }

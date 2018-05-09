@@ -183,7 +183,7 @@ public class TimeTicker {
         /**
          * 执行完成后回调接口
          */
-        private Listener mListener;
+        private Listener<V> mListener;
 
         @Override
         public void run() {

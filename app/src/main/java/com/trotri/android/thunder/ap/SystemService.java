@@ -17,6 +17,7 @@
 package com.trotri.android.thunder.ap;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.location.LocationManager;
@@ -68,6 +69,11 @@ public class SystemService {
      * 剪贴板服务类
      */
     private ClipboardManager mClipboardManager;
+
+    /**
+     * Activity服务类
+     */
+    private ActivityManager mActivityManager;
 
     /**
      * 上下文环境
@@ -172,6 +178,22 @@ public class SystemService {
         }
 
         return mClipboardManager;
+    }
+
+    /**
+     * 获取Activity服务类
+     *
+     * @return an ActivityManager Object, or null
+     */
+    public ActivityManager getActivityManager() {
+        if (mActivityManager == null) {
+            Object service = getAppContext().getSystemService(Context.ACTIVITY_SERVICE);
+            if (service != null) {
+                mActivityManager = (ActivityManager) service;
+            }
+        }
+
+        return mActivityManager;
     }
 
     /**

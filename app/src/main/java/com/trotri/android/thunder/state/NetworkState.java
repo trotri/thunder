@@ -42,7 +42,10 @@ import java.util.Enumeration;
 /**
  * NetworkState class file
  * 网络信息类，Wifi名称、Mac地址、Ip地址
- * 需要权限：<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+ * 需要权限：
+ * <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+ * 和
+ * <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
  *
  * @author 宋欢 <trotri@yeah.net>
  * @version $Id: NetworkState.java 1 2015-02-22 10:00:06Z huan.song $

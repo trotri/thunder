@@ -13,7 +13,10 @@
     <string name="state_contacts">State Contacts</string>
     <string name="state_display_pixels">State Display Pixels</string>
     <string name="state_location_state">State Location State</string>
+    <string name="state_phone_state">State Phone State</string>
+    <string name="state_network_state">State Network State</string>
     <string name="ht_network_change_receiver">HT Network Change Receiver</string>
+    <string name="test">Test</string>
 
     <string name="boolean_true">True</string>
     <string name="boolean_false">False</string>
@@ -31,6 +34,25 @@
     <string name="version_code">版本号：</string>
     <string name="version_name">版本名：</string>
     <string name="package_name">包名：</string>
+
+    <string name="device_id">设备识别码：</string>
+    <string name="subscriber_id">设备Id：</string>
+    <string name="network_operator">网络运营商类型：</string>
+    <string name="network_operator_name">网络运营商名称：</string>
+    <string name="android_id">Android Id：</string>
+    <string name="language">手机系统语言：</string>
+
+    <string name="wifi_name">Wifi名称：</string>
+    <string name="mac">Mac地址：</string>
+    <string name="wifi_mac">Wifi-Mac：</string>
+    <string name="host_mac">Host-Mac：</string>
+    <string name="ip">Ip：</string>
+    <string name="wifi_ip">Wifi-Ip：</string>
+    <string name="host_ip">Host-Ip：</string>
+    <string name="connect_type">联网类型：</string>
+    <string name="connect_type_desc">0-未知、1-Wifi、2-2G、3-3G、4-4G</string>
+    <string name="carrier_type">移动运营商类型：</string>
+    <string name="carrier_type_desc">0-未知、1-移动、2-联通、3-电信</string>
 
     <string name="display_pixels_width">屏幕X轴像素点个数：</string>
     <string name="display_pixels_height">屏幕Y轴像素点个数：</string>

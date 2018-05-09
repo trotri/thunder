@@ -27,7 +27,10 @@ public final class ButtonPanelBean {
     public static final int STATE_CONTACTS = 601;
     public static final int STATE_DISPLAY_PIXELS = 602;
     public static final int STATE_LOCATION_STATE = 603;
+    public static final int STATE_PHONE_STATE = 604;
+    public static final int STATE_NETWORK_STATE = 605;
     public static final int HT_NETWORK_CHANGE_RECEIVER = 700;
+    public static final int TEST = 2000;
 
     /**
      * Item final class

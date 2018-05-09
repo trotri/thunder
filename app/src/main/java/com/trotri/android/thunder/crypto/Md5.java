@@ -16,6 +16,8 @@
 
 package com.trotri.android.thunder.crypto;
 
+import android.text.TextUtils;
+
 import com.trotri.android.thunder.ap.Constants;
 import com.trotri.android.thunder.ap.Logger;
 import com.trotri.android.thunder.ap.ThreadPool;
@@ -139,7 +141,7 @@ public class Md5 {
      * @return 密文，字节数组，或null
      */
     public static byte[] toBytes(String value) {
-        if (value == null) {
+        if (TextUtils.isEmpty(value)) {
             Logger.e(Constants.TAG_LOG, TAG + " toBytes() value is null");
             return null;
         }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="phoneState"
+            type="com.trotri.android.thunder.state.PhoneState" />
+
+    </data>
+
+    <LinearLayout style="@style/LLayWrapper">
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/device_id" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(phoneState.getDeviceId())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/subscriber_id" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(phoneState.getSubscriberId())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/network_operator" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(phoneState.getNetworkOperator())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/network_operator_name" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(phoneState.getNetworkOperatorName())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/android_id" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(phoneState.getAndroidId())}" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StateVersionRowWrapper">
+
+            <TextView
+                style="@style/StateVersionLeftCell"
+                android:text="@string/language" />
+
+            <TextView
+                style="@style/StateVersionRightCell"
+                android:text="@{String.valueOf(phoneState.getLanguage())}" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
